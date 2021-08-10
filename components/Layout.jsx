@@ -52,7 +52,7 @@ export const Layout = ({ children, hideSteps }) => {
                Setup your Account
                <>
                   <Styles.Step className={isStepActive(4)}>
-                     <span>Hosting {user.organization?.hosting?.type}</span>
+                     <span>Pricing</span>
                      <span className="price">
                         {user.organization?.hosting?.cost === 0
                            ? 'Free'

@@ -3,7 +3,6 @@ import { useMutation } from "@apollo/client";
 import {NextArrow,BackArrow,Flag} from "/assets/icons";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import Image from "next/image";
 import Layout  from "../../../components/Layout";
 import { useAuth } from "../../../store/auth";
 import VerifyEmailBanner from "../../../components/VerifyEmailBanner";
@@ -38,7 +37,7 @@ export default function AboutYourself() {
   })
   const [update_org] = useMutation(UPDATE_ORGANIZATION, {
     onCompleted: () => {
-      history.push("/onboard/signup/hosting");
+      history.push("/onboard/signup/pricing");
     },
     onError: (error) => {
       console.log(error);
@@ -63,7 +62,7 @@ export default function AboutYourself() {
         variables: {
           id: user.organization.id,
           _set: {
-            onboardStatus: "HOSTING",
+            onboardStatus: "PRICING",
           },
         },
       });

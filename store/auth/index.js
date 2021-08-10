@@ -82,8 +82,8 @@ export const AuthProvider = ({ children }) => {
                  case 'ABOUT_YOURSELF':
                     Router.push('/onboard/signup/about-yourself')
                     break
-                 case 'HOSTING':
-                    Router.push('/onboard/signup/hosting')
+                 case 'PRICING':
+                    Router.push('/onboard/signup/pricing')
                     break
                  case 'CARD_DETAILS':
                      Router.push('/onboard/signup/card-details')

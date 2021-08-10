@@ -273,6 +273,14 @@ ul.link_container {
 .onDemandCategories li {
   margin-bottom: 2rem;
 }
+.onDemandCategories2 {
+  margin-left:20px;
+  list-style-type:disc;
+  font-family: Work Sans;
+}
+.onDemandCategories2 li {
+  margin-bottom: 12px;
+}
 .nunito {
   font-family: "Nunito", sans-serif;
 }
@@ -1107,7 +1115,7 @@ ul.link_container {
 }
 .pricingsection1 {
   text-align: center;
-  padding: 100px 0px;
+  padding: 25px 0px;
 }
 .pricingsection2 {
   text-align: center;
@@ -1121,31 +1129,37 @@ ul.link_container {
   letter-spacing: 1px;
   text-transform: capitalize;
 }
-.price-subheading {
-  position: relative;
-  color: #111b2b;
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-}
+
 .pricing-box .card-title {
-  position: relative;
-  font-weight: 700;
+  font-weight: bold;
   color: #111b2b;
-  font-size: 60px;
+  font-size: 80px;
   line-height: 1em;
   font-family: "Nunito", sans-serif;
 }
 .pricing-box {
-  position: relative;
-  width: 100%;
-  text-align: center;
+  margin-left: 32px;
   padding: 20px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  background: #f8f8f7;
+  width: 95.5%;
+  height: 185px;
+  background: #FFFFFF;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+border-radius: 12px;
+}
+.pricing-button{
+  background: #FFFFFF;
+  color: #111B2B;
+  font-weight: 500;
+  font-family: 'Work Sans', sans-serif;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top:7px;
+  font-size: 18px;
+  padding-bottom:7px;
+  border: 3px solid #111B2B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  margin-left: 7rem;
 }
 .pricing-box h4 {
   margin: 10px 0px 0px;
@@ -1655,4 +1669,13 @@ line-height: 28px;
 text-transform: capitalize;
 
 color: #CEDEF3;
+}
+.moreFeatures{
+  font-family: Work Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 20px;
+margin-left: 420px;
+color: #1374F6;
 }
