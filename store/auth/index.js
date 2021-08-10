@@ -145,7 +145,7 @@ export const AuthProvider = ({ children }) => {
            dispatch({ type: 'CHANGE_STEP', payload: 3 })
            break
         }
-        case '/onboard/signup/hosting': {
+        case '/onboard/signup/pricing': {
            dispatch({ type: 'CHANGE_STEP', payload: 4 })
            break
         }

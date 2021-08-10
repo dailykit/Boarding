@@ -35,6 +35,7 @@ export default function AboutYourself() {
       return setError2("");
     }
   })
+
   const [update_org] = useMutation(UPDATE_ORGANIZATION, {
     onCompleted: () => {
       history.push("/onboard/signup/pricing");
@@ -43,6 +44,7 @@ export default function AboutYourself() {
       console.log(error);
     },
   });
+
   const config = {
     angle: 90,
     spread: "123",
@@ -56,6 +58,7 @@ export default function AboutYourself() {
     perspective: "500px",
     colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
   };
+  
   const [update] = useMutation(UPDATE_USER, {
     onCompleted: () => {
       update_org({
