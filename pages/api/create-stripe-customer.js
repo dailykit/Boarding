@@ -1,11 +1,12 @@
 import { GraphQLClient } from 'graphql-request';
-const stripe = require('stripe')(window._env_.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export const client = new GraphQLClient(window._env_.KEYCLOAK_URL, {
+export const client = new GraphQLClient(process.env.HASURA_KEYCLOAK_URL, {
    headers: {
-      'x-hasura-admin-secret': window._env_.ADMIN_SECRET
+      'x-hasura-admin-secret': process.env.KEYCLOAK_ADMIN_SECRET
    }
 })
+
 
 export default async function createStripeCustomer(req, res) {
   if (req.method === 'POST') {

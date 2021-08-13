@@ -78,7 +78,7 @@ export default function Signup() {
 
   const submit = async () => {
     setSubmitting(true);
-    createStripeCustomer(form.email)
+    console.log("submitting1")
     try {
       const result = await utils.register({
         email: form.email,
@@ -87,6 +87,7 @@ export default function Signup() {
         firstName: form.firstName,
       });
       if (result?.success) {
+        console.log("submitting2")
         const user = await utils.login({
           email: form.email.trim(),
           password: form.password.trim(),
@@ -106,19 +107,6 @@ export default function Signup() {
 
   const handleEmailExists = (value) =>
     check_email({ variables: { where: { email: { _eq: value } } } });
-   
-  const createStripeCustomer = async (email) => {
-      try {
-         if(email){
-         const { data } = await axios.post('/api/create-stripe-customer', { email })
-         console.log('✨✨',{data})
-         return data
-         }
-      } catch (error) {
-         return error
-      }
-   }
-
 
 
   return (
@@ -189,10 +177,8 @@ export default function Signup() {
             className={!isValid || submitting ? "disabled" : ""}
             onClick={(e) => (isValid || !submitting) && submit()}
             disabled={!form.firstName || !form.lastName || !form.email || !form.password ||!email || !FirstName || !LastName || error}
-          >
-            {submitting ? "Submitting" : "Submit"}
+          > {submitting ? <>SUBMITTING<Ellipse/></>:"SUBMIT" }
           </Submit>
-          
           {error2 && (
             <Error>{error2}</Error>
           )}
@@ -224,6 +210,15 @@ padding-top: 0.5rem;
 padding-bottom: 0.5rem;
 `;
 
+const Ellipse = styled.div`
+display:inline;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+padding: 0px 10px 0px 10px;
+border: 3px dashed white;
+box-sizing: border-box;
+`
 
 const Error=styled.span`
 justify-self: start;

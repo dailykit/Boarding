@@ -21,9 +21,9 @@ import Image from 'next/image';
 export const PaymentForm = () => {
    const { user } = useAuth();
    const [intent, setIntent] = React.useState(null)
-   console.log( process.browser && `${window._env_.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`)
+   console.log( process.browser && `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`)
    const stripePromise = loadStripe(
-      process.browser && `${window._env_.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+      process.browser && `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
    );
 console.log(stripePromise)
 
@@ -213,8 +213,8 @@ const CardSetupForm = ({ intent, handleResult }) => {
             type="submit"
             style={{ marginTop: "1.2rem" , marginLeft: "0.3%"}}
             className={ submitting ? "disabled" : ""}
-          >
-            {submitting ? "Submitting" : "Submit"}
+          >SUBMIT
+            {submitting && <Ellipse/>}
           </Submit>
             {error && <span tw="block text-red-500 mt-2">{error}</span>}
          </form>
@@ -326,3 +326,9 @@ padding-bottom: 40px;
 }
 
 `;
+const Ellipse = styled.span`
+width: 22px;
+height: 22px;
+
+border: 3px dashed #FFFFFF;
+box-sizing: border-box;`
