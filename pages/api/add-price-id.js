@@ -22,7 +22,7 @@ export default async function addPriceId(req, res) {
           },
         }
       )
-        return res.status(200).redirect(`${req.headers.origin}/onboard/signup/card-details?priceid=${priceId}`);
+        return res.status(200).redirect(`${req.headers.origin}/onboard/signup/card-details`);
       } catch (err) {
         res.status(500).json({ statusCode: 500, message: err.message });
       }

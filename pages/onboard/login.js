@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { useAuth } from "../../store/auth";
 import { Layout_2 } from "../../components";
 import Footer from "../../components/Footer";
+import Image from "next/image";
+
 export default function Login() {
   const router = useRouter();
   const { authenticated, login } = useAuth();
@@ -49,10 +51,13 @@ export default function Login() {
   return (
     <>
     <Layout_2>
+    <div className="container">
+          <div className="row">
+            <div className="col-md-7 col-md-offset-3">
       <Panel>
-        <h1 className="text-2xl mb-6 mt-4 nunito" style={{"fontWeight":"bold"}}>Login</h1>
+      <h2 style={{alignItems:"left",marginTop:"20px",marginBottom:"20px",fontWeight:"bold",fontSize:"36px",fontFamily: '"Nunito",sans-serif'}}>Login</h2>
         <FieldSet>
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email">Email Address</Label>
           <Input
             type="email"
             name="email"
@@ -71,21 +76,30 @@ export default function Login() {
             placeholder="Enter your password"
           />
         </FieldSet>
-        <Link href="/onboard/signup">
-          <button className="bold" style={{ "marginLeft": "-13rem" }}>
-            Register instead?
-          </button>
-        </Link>
+       
         <Submit
-          style={{ marginTop: "0.2rem" }}
           className={!isValid ? "disabled" : ""}
           onClick={() => isValid && submit()}
           disabled={!form.email || !form.password}
         >
-          Login
+          SUBMIT
         </Submit>
+     
+         
+        <button className="bold" style={{margin:"0.4rem 0 1.4rem -2.4rem",fontWeight:"600" }}>
+        <span style={{color:"#111B2B"}}> Not registered yet? </span>   <Link href="/onboard/signup"> Register instead?   </Link>
+          </button>
+     
         {error && <Error>{error}</Error>}
       </Panel>
+      </div>
+        <div className="col-md-5 col-md-offset-3" style={{"marginTop":"200px"}}>
+        <Image width="360px"
+         height="350px"
+          src='/assets/images/Login.png'
+          alt="login"/>
+          </div>
+        </div></div>
       <div style={{marginBottom:"4rem"}}></div>
       </Layout_2>
       <div style={{marginTop:"14rem"}}></div>
@@ -100,7 +114,6 @@ const Panel = styled.section`
   flex-direction:column;
   margin-left: auto;
   justify-content: center;
-  align-items: center;
   margin-right: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -115,27 +128,32 @@ margin-bottom: 1rem;
 `;
 
 const Label = styled.label`
-font-weight: bold;
-font-family:nunito;
 --tw-text-opacity: 1;
-color: rgba(75, 85, 99, var(--tw-text-opacity));
-margin-bottom: 0.25rem;
+color: #111B2B;
+font-family: "Nunito", sans-serif;
+font-weight: bold;
+margin-bottom: 4px;
+    font-size: 20px;
 `;
 
 const Input = styled.input`
-width: 100%;
-display:block;
+width: 120%;
+display: block;
 border-width: 1px;
 height: 2.5rem;
+border-color: #111b2b;
 border-radius: 0.25rem;
 padding-left: 0.5rem;
 padding-right: 0.5rem;
+margin-top: 7px;
 outline: 2px solid transparent;
 outline-offset: 2px;
-&.focus{
-border-width: 2px;
---tw-border-opacity: 1;
-border-color: rgba(156, 163, 175, var(--tw-border-opacity));
+border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #111B2B;
+&:focus {
+  border-width: 2px;
+  border-color: #111b2b;
 }
 `;
 
@@ -149,23 +167,28 @@ margin-top: 0.5rem;
 `;
 
 const Submit = styled.button`
-width: 100%;
-font-family: "Nunito", sans-serif;
+width: 120%;
+font-family: Work Sans, sans-serif;
+font-size: 20px;
+margin-top: 2rem;
 border-radius: 0.25rem;
 height: 2.5rem;
 --tw-bg-opacity: 1;
-background-color:#8ac03b;
+background-color: #111B2B;
 --tw-text-opacity: 1;
 border:none;
-color: rgba(255, 255, 255, var(--tw-text-opacity));
 text-transform: uppercase;
 letter-spacing: 0.05em;
-padding-top:10px;
-padding-bottom:10px;
+border-radius: 15px;
+color: #fff;
+padding-top: 11px;
+padding-bottom: 38px;
+
 &:disabled {
-  --tw-bg-opacity: 1;
-  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+  background: #CEDEF3;
+  border-radius: 15px;
   cursor: not-allowed;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
+ 
 }
+
 `;

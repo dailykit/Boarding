@@ -10,7 +10,7 @@ export const client = new GraphQLClient(process.env.HASURA_KEYCLOAK_URL, {
 export default async function createStripeCustomer(req, res) {
   if (req.method === 'POST') {
     try {
-        const {email} = req.body.event.data.new
+      const { email } = req.body
         const customer = await stripe.customers.create({
           email: email
         });

@@ -15,12 +15,12 @@ export default class ScheduleMeetingSection1 extends PureComponent {
                   data-url="https://calendly.com/dailykit/15min"
                   style={{ minWidth: "320px", height: "630px" }}
                 >
-                  {/* <div className="lds-ring">
+                  <div className="lds-ring">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
-                  </div> */}
+                  </div>
                 </div>
                 <small>
                   <br /> <br />
@@ -28,8 +28,9 @@ export default class ScheduleMeetingSection1 extends PureComponent {
               </div>
             </div>
           </div>
+      
         
-          <div className="col-md-4 col-xs-10" style={{"marginTop":"70px"}}>
+          <div className="col-md-5 col-xs-10" style={{"marginTop":"70px"}}>
             
         
                  

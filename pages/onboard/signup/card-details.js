@@ -16,7 +16,7 @@ import { Footer as Foter, Main,} from "../../../components/styled";
 import Footer from "../../../components/Footer";
 import {Loader} from "../../../components";
 import axios from 'axios';
-
+import Image from 'next/image';
 
 export const PaymentForm = () => {
    const { user } = useAuth();
@@ -126,7 +126,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
 
    const [update] = useMutation(UPDATE_ORGANIZATION, {
       onCompleted: () => {
-         router.push("/onboard/signup/support");
+         router.push("/onboard/signup/finish-setup");
       },
       onError: (error) => {
          console.log(error);
@@ -178,11 +178,14 @@ const CardSetupForm = ({ intent, handleResult }) => {
       <>
       <Layout>
          <Main>
-         <form onSubmit={handleSubmit} className="container">
-            <div className="row justify-content-center">
-               <h4 className="text-2xl nunito text-center" style={{ "margin": "34px 0 30px 0px", fontWeight: "bold" }}>Enter your Payment Details</h4>
-               <div className="col-md-5 col-sm-12 wrapper">
-                  <section className="mb-3 mt-4">
+         <div className="container">
+          <div className="row justify-content-between">
+            <div className="col-md-7 col-md-offset-3">
+            <form onSubmit={handleSubmit} className="container">
+            <div className="row">
+            <h2 className="nunito" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold",fontSize:"34px"}}>Enter your Payment Details</h2>
+               <div className="col-md-12 col-sm-12 wrapper" style={{marginLeft: "12px"}}>
+                  <section className="mb-3 mt-4" style={{padding:"6px 12px 6px 12px"}}>
                      <label htmlFor="name" className="label">
                         Card Holder's Name
                      </label>
@@ -196,7 +199,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
                         className="input mt-2"
                      />
                   </section>
-                  <section className="mt-4 mb-4">
+                  <section className="mt-4 mb-4" style={{padding:"0px 12px 1.2px 12px"}}>
                      <label htmlFor="name" className="label mt-4">
                         Card Details
                      </label>
@@ -204,16 +207,26 @@ const CardSetupForm = ({ intent, handleResult }) => {
                   </section>
                </div>
             </div>
+           
             <Submit
-               disabled={!name || submitting}
-               type="submit"
-               className="mt-2 mb-2"
-               style={{ "marginLeft": "28.7%" }}
-            >
-               {submitting ? 'Saving...' : 'Save'}
-            </Submit>
+            disabled={!name || submitting}
+            type="submit"
+            style={{ marginTop: "1.2rem" , marginLeft: "0.3%"}}
+            className={ submitting ? "disabled" : ""}
+          >
+            {submitting ? "Submitting" : "Submit"}
+          </Submit>
             {error && <span tw="block text-red-500 mt-2">{error}</span>}
          </form>
+         </div>
+        <div className="col-md-4 col-md-offset-3" style={{"marginTop":"100px"}}>
+        <Image width="300px"
+         height="300px"
+          src='/assets/images/PaymentPage.png'
+          alt="payment-page"/>
+          </div>
+        </div></div>
+        
       </Main>
          <Foter style={{ marginTop: "-80px", marginLeft: "20px", justifyContent: "start" }}>
          </Foter>
@@ -227,7 +240,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
 
 const CardSection = () => {
    return (
-      <CardSectionWrapper className="mt-2">
+      <CardSectionWrapper className="mt-2" style={{marginBottom: "1.2rem"}}>
          <CardElement
             options={CARD_ELEMENT_OPTIONS}
          />
@@ -269,28 +282,7 @@ query organizations($where: organization_organizationAdmin_bool_exp = {}) {
  }`
 
 
-// styled-components
-const Submit = styled.button`
-width: 42.5%;
-font-family: "Nunito", sans-serif;
-border-radius: 0.25rem;
-height: 2.5rem;
---tw-bg-opacity: 1;
-background-color:#8ac03b;
---tw-text-opacity: 1;
-border:none;
-color: rgba(255, 255, 255, var(--tw-text-opacity));
-text-transform: uppercase;
-letter-spacing: 0.05em;
 
-&:disabled {
-  --tw-bg-opacity: 1;
-  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
-  cursor: not-allowed;
-  color: rgba(55, 65, 81, var(--tw-text-opacity));
-}
-
-`;
 const CardSectionWrapper = styled.div`
    .StripeElement {
       height: 40px;
@@ -309,3 +301,28 @@ const CardSectionWrapper = styled.div`
       background-color: #fefde5 !important;
    }
 `
+const Submit = styled.button`
+width: 103.3%;
+font-family: "Nunito", sans-serif;
+font-size: 20px;
+border-radius: 0.25rem;
+height: 2.5rem;
+--tw-bg-opacity: 1;
+background-color: #111B2B;
+--tw-text-opacity: 1;
+border:none;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+border-radius: 15px;
+color: #fff;
+padding-top: 13px;
+padding-bottom: 40px;
+
+&:disabled {
+  background: #CEDEF3;
+  border-radius: 15px;
+  cursor: not-allowed;
+ 
+}
+
+`;

@@ -54,10 +54,10 @@ export default function PricingSection1(props) {
                       {offer.price_id && <form action="/api/add-price-id" method="POST">
                           <input type="hidden" name="priceId" value={offer.price_id} />
                           <input type="hidden" name="email" value={offer.email} />
-
+                          <button className="pricing-button" type="submit" role="link" onClick={() => { nextPage(); offer.setOnSelect(true) }}>CONTINUE</button>
+                      
                         </form>}
-                      <button className="pricing-button" type="submit" role="link" onClick={() => { nextPage(); offer.setOnSelect(true) }}>CONTINUE</button>
-                      </div>
+                     </div>
                        
                         
                     </div>

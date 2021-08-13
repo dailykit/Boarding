@@ -12,7 +12,7 @@ import { ADMIN_EXISTS } from "../../../graphql";
 import  Footer from "../../../components/Footer";
 import Layout  from "../../../components/Layout";
 
-import Image from "next/Image";
+import Image from "next/image";
 
 var validator = require('validator');
 
@@ -78,6 +78,7 @@ export default function Signup() {
 
   const submit = async () => {
     setSubmitting(true);
+    createStripeCustomer(form.email)
     try {
       const result = await utils.register({
         email: form.email,
@@ -106,7 +107,20 @@ export default function Signup() {
   const handleEmailExists = (value) =>
     check_email({ variables: { where: { email: { _eq: value } } } });
    
-  
+  const createStripeCustomer = async (email) => {
+      try {
+         if(email){
+         const { data } = await axios.post('/api/create-stripe-customer', { email })
+         console.log('✨✨',{data})
+         return data
+         }
+      } catch (error) {
+         return error
+      }
+   }
+
+
+
   return (
    <>
     <Layout>
@@ -173,7 +187,7 @@ export default function Signup() {
           <Submit
             style={{ marginTop: "0.2rem" }}
             className={!isValid || submitting ? "disabled" : ""}
-            onClick={() => (isValid || !submitting) && submit()}
+            onClick={(e) => (isValid || !submitting) && submit()}
             disabled={!form.firstName || !form.lastName || !form.email || !form.password ||!email || !FirstName || !LastName || error}
           >
             {submitting ? "Submitting" : "Submit"}
@@ -243,7 +257,7 @@ margin-top: 0.5rem;
 // `;
 
 const Submit = styled.button`
-width: 100%;
+width: 109.5%;
 font-family: "Nunito", sans-serif;
 font-size: 20px;
 border-radius: 0.25rem;

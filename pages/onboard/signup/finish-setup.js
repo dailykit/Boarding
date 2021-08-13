@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { useMutation,useLazyQuery } from "@apollo/client";
 import { Gif } from "@giphy/react-components";
 import { GiphyFetch } from "@giphy/js-fetch-api";
-
+import Image from 'next/image';
 import Layout  from "../../../components/Layout";
-import { Button, H2, Main } from "../../../components/styled";
+import {Main } from "../../../components/styled";
 import { useAuth } from "../../../store/auth";
 import { ADMIN_URL_EXISTS } from "../../../graphql";
 import VerifyEmailBanner from "../../../components/VerifyEmailBanner";
@@ -145,15 +145,19 @@ const Installation = () => {
 
   };
   return (
-    <div className="flex-container" style={{ display: "flex", justifyContent: "center", margin: "2rem 0 2rem" }}>
-      <div className="finishSetupSection mt-3 mx-auto text-center" >
-        <h2 className="text-2xl" style={{"marginTop":"23px",fontWeight:"bold"}}>Customize your URL</h2>
-        <p className="text-center text-gray-500 mb-2" >
-          This is where you will access your apps and manage your team.<br/> Make sure
-          to bookmark it once you’re inside.
-        </p>
+    <div className="flex-container" style={{ display: "flex", justifyContent: "center", margin: "1rem 0 2rem" }}>
+       <div className="container">
+          <div className="row">
+          
+      <div className="col-md-6 finishSetupSection mx-auto" >
+      <h2 className="nunito" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold",fontSize:"34px"}}>Customize your URL</h2>
+        <Para>
+          This is where you will access your apps <br/>
+          and manage your team. Make sure to<br/>
+          bookmark it once you’re inside.
+        </Para>
         <section className="mb-3 flex flex-col items-center">
-          <input
+          <Input
             required
             id="name"
             type="text"
@@ -162,25 +166,32 @@ const Installation = () => {
             autoComplete="off"
             placeholder="Enter your subdomain"
             onChange={(e) => {setName(e.target.value.trim()); handleUrlExists(e.target.value.trim()+".dailykit.org")}}
-            // onBlur={(e) => }
-            className="input-border h-10 border-b-2 border-green-400 focus:border-green-600"
-          /><br/>
-          <span className="text-left text-green-500">{name}.dailykit.org</span>
+            style={{display:"inline",marginBottom:"15px"}}
+          />
+          <Button
+          style={{display:"inline"}}
+          onClick={submit}
+          disabled={!name || loading || !user?.keycloak?.email_verified  || error}
+        >
+          {loading ? "Saving" : "SAVE"}
+        </Button> 
+        <br/>
+          <Para className="text-left nunito" style={{fontWeight:"600",fontSize:"18px"}} >{name}.dailykit.org</Para>
           
           <div style={{marginLeft:"10rem"}}><Confetti active={ onProps } config={ config }/></div>
           
         </section>
-
-        <Button
-          onClick={submit}
-          disabled={!name || loading || !user?.keycloak?.email_verified || error}
-        >
-          {loading ? "Saving" : "Save"}
-        </Button> 
         {error && (
             <Error>{error}</Error>
           )}
       </div>
+      <div className="col-md-5 col-md-offset-3" style={{"marginTop":"20px"}}>
+        <Image width="320px"
+         height="270px"
+          src='/assets/images/FinishSetup.png'
+          alt="login-page"/>
+          </div>
+        </div></div>
     </div>
   );
 };
@@ -242,16 +253,16 @@ const GifCycle = () => {
         </header>
       ) : (
         <header className="text-left p-3 absolute z-10 inset-0 h-full">
-          <h2 className="text-2xl text-center" style={{fontWeight:"bold"}}>
-            Setting up your instance!
+              <h2 className="nunito" style={{marginTop:"20px",fontWeight:"bold",fontSize:"34px"}}> Setting up your instance!
+           
           </h2>
-          <p className="mt-1 text-center leading-5">
+           <Para>
             This could take a while. In the meantime, enjoy this GIF sequence
             we've curated for you.
-          </p>
+          </Para>
         </header>
       )}
-      <section style={{marginLeft:"25%",maxWidth:"50vw"}}>{gifs.length > 0 && <RenderGif gifs={gifs} />}</section>
+      <section style={{marginLeft:"2%",minWidth:"70vw",marginTop:"1.5%"}}>{gifs.length > 0 && <RenderGif gifs={gifs} />}</section>
     </div>
   );
 };
@@ -293,4 +304,59 @@ color: rgba(239, 68, 68, var(--tw-text-opacity));
 margin-top: 0.5rem;
 font-weight:bold;
 font-family:nunito;
+`
+const Para= styled.span`
+font-family: Work Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+
+color: #111B2B;
+`
+export const Input = styled.input`
+margin-top: 1.5rem;
+font-family: "Nunito", sans-serif;
+width: 54%;
+display: block;
+border-width: 1px;
+height: 2.5rem;
+border-color: #111b2b;
+border-radius: 0.25rem;
+border: none;
+ border-bottom: 2px solid #111B2B;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+outline: 2px solid transparent;
+outline-offset: 2px;
+&:focus {
+  border-width: 2px;
+  border-color: #111b2b;
+}
+`;
+const Button = styled.button`
+background: #fff;
+border-style: none;
+padding: 2px 10px 10px 5px;
+height: 2.5rem;
+width: 66px;
+height: 36px;
+font-family: Work Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+margin-left:10px;
+text-transform: uppercase;
+
+color: #111B2B;
+padding: 3px 13px 3px 10px;
+border: 3px solid #111B2B;
+box-sizing: border-box;
+border-radius: 14px;
+   &:disabled {
+      cursor: not-allowed;
+      border: 3px solid #CEDEF3;
+      color: #CEDEF3;
+   }
 `
