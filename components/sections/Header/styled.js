@@ -67,8 +67,5 @@ export const Styles = {
     font-family: 'Work Sans', sans-serif;
     border: 2px solid #FFFFFF;
     border-radius: 16px;
-    padding-left: 2rem; !important
-    padding-right: 2rem; !important
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;`,
+    padding:0.3rem 2rem 0.3rem 2rem;`,
 }
