@@ -6,6 +6,7 @@ import { useAuth } from "../store/auth";
 
 const VerfiyEmailBanner = () => {
   const { user } = useAuth();
+  const [showBanner,setonShowBanner] = React.useState(false);
 
   const resend = async () => {
     try {
@@ -17,7 +18,7 @@ const VerfiyEmailBanner = () => {
     }
   };
   return (
-    <Styles.Banner>
+    <Styles.Banner style={{display:showBanner && "none"}}>
       <Styles.Aside>
         <Image src="/assets/images/MailVerification.png"  width="70"
          height="70" alt="verifymail"/>
@@ -25,7 +26,7 @@ const VerfiyEmailBanner = () => {
       <Styles.Main>
         <section>
           <h3>Verification Mail Sent!</h3>
-          <span style={{cursor:"pointer"}}>✖</span>
+          <span style={{cursor:"pointer"}} onClick={()=>setonShowBanner(true)}>✖</span>
           <p>
           We need to verify your Email Address. Please check your inbox for a messsage from us. You’ll find confirmation link inside. 
           </p>
