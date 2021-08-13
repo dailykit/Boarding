@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Footer2 from "../components/Footer2";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 export default function HomePage() {
@@ -25,7 +25,7 @@ export default function HomePage() {
       </Head>
       <Navbar />
       <Home />
-      <Footer2/>
+      <Footer/>
     </>
   );
 }

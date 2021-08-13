@@ -16,9 +16,9 @@ class MyDocument extends Document {
           <div id="portal" />
           <Main />
           <NextScript />
-          {/* <script defer src="/mailer.js" />
+          <script defer src="/mailer.js" />
           <script defer src="/analytics.js" />
-          <script defer src="/googleTagManager.js" /> */}
+          <script defer src="/googleTagManager.js" />
         </body>
       </Html>
     );
