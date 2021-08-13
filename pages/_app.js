@@ -20,17 +20,18 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
           defer
         ></script>
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async
-        ></script>
+        
         <link
           href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;400;700;900&family=Nunito:wght@400;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
+        ></script>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-146874242-1"
