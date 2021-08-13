@@ -88,12 +88,12 @@ export const Navbar = () => {
                 <li className="nav-item">
                   <section className="username">
                   {!location.pathname.includes("login") ? (
-                        <Styles.ghostButton style={{color:"white",display:"inline",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px",marginLeft:"24rem",paddingTop:"0.6rem"}} className="nunito"
+                        <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nunito"
                          onClick={() => location.push("/onboard/login")}>
                             LOG IN
                             </Styles.ghostButton>
                   ) : (
-                    <Styles.ghostButton style={{color:"white",display:"inline",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px",marginLeft:"24rem",paddingTop:"0.6rem"}} className="nunito" 
+                    <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nunito" 
                          onClick={() => location.push("/onboard/signup")}>
                            SIGN UP
                             </Styles.ghostButton>)}
@@ -110,7 +110,7 @@ export const Navbar = () => {
                       {user?.lastName}
                     </span>
                     {user?.organization.onboardStatus == "FINISH_SETUP" ? (
-                      <Styles.ghostButton style={{color:"white",display:"inline", marginLeft: "1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
+                      <Styles.ghostButton style={{color:"white",display:"inline", marginLeft: "0.5rem",paddingRight:"0.6rem",paddingLeft:"0.6rem",fontSize:"17px"}}
                         className="nunito"
                         onClick={() => location.push("/")}
                       >
