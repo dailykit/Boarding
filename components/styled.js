@@ -106,12 +106,6 @@ font-family: "Nunito", sans-serif;
    input {
       font-size: 16px;
       color: #686d7b;
-      input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-}
    }
    label {
       margin-bottom: 4px;
@@ -252,10 +246,5 @@ outline-offset: 2px;
   border-width: 2px;
   border-color: #111b2b;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
 }
 `;

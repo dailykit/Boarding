@@ -269,6 +269,7 @@ ul.link_container {
 } */
 .onDemandCategories {
   list-style-type:disc;
+  font-family: Work Sans;
 }
 .onDemandCategories li {
   margin-bottom: 2rem;
@@ -1115,7 +1116,7 @@ ul.link_container {
 }
 .pricingsection1 {
   text-align: center;
-  padding: 25px 0px;
+  padding: 16px 0px;
 }
 .pricingsection2 {
   text-align: center;
@@ -1637,10 +1638,13 @@ border-radius: 9999px;
 }
 .label{
   display:block;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  --tw-text-opacity: 1;
-color: rgba(107, 114, 128, var(--tw-text-opacity));
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  
+  color: #FCDE67;
 }
 .input{
   width: 100%;
