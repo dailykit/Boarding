@@ -1,0 +1,3 @@
+#Ignore the unused components
+pages/onboard/signup/import.js
+pages/onboard/signup/support.js
