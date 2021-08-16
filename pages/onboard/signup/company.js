@@ -98,10 +98,17 @@ export default function Company() {
       <Layout>
         <Main>
           {!user?.keycloak?.email_verified && <VerifyEmailBanner />}
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem", marginTop:"2.6rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
+          <div style={{ display: "flex", flexDirection:"column",justifyContent: "center",marginTop:"2.3rem" }}>
+            {/* next button */}
+          <div style={{display: "flex",justifyContent: "flex-end" ,fontWeight: "bold"}}>
+          <Confetti active={onProps} config={config} />
+          <Button onClick={save}  style={{marginRight:"20px"}} disabled={!form.company}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
+          </Button>
+        </div>
+        {/* end of next button */}
+            <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
               <Form style={{ fontWeight: "bold",width: "380px" }}>
-                <h2 className="nunito" style={{marginTop:"20px",fontWeight:"bold",fontSize:"34px"}}>Enter Company Details</h2>
+                <h2 className="nunito" style={{marginTop:"-38px",fontWeight:"bold",fontSize:"34px"}}>Enter Company Details</h2>
                 <Field>
                   <Label htmlFor="company">Company Name</Label>
                   <Input
@@ -236,12 +243,7 @@ export default function Company() {
             </section>
           </div>
         </Main>
-        <Foter>
-        <Confetti active={onProps} config={config} />
-          <Button onClick={save} disabled={!form.company} style={{marginTop:"-38.3rem", marginLeft:"65.6rem"}}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
-          </Button>
-         
-        </Foter>
+       
         
       </Layout>
       {/* <div style={{marginBottom:"4rem"}}></div> */}
