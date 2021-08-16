@@ -113,9 +113,19 @@ export default function AboutYourself() {
     <Layout>
       <Main>
         {!user?.keycloak?.email_verified && <VerifyEmailBanner />}
-        <div style={{ display: "flex", justifyContent: "center", margin: "2.3rem 0 2rem" }}>
+        <div style={{ display: "flex",flexDirection:"column", justifyContent: "center", margin: "2.3rem 0 2rem" }}>
+            {/* back button */}
+          
+          <div style={{display:"flex",justifyContent:"flex-end",fontWeight: "bold"}}>
+        <BackButton style={{marginRight:"1075px"}} onClick={() => history.push("/onboard/signup/company")}><BackArrow/></BackButton>
+        <Button onClick={submit} style={{marginRight:"20px"}} disabled={!form.designation || !form.phoneNumber} ><NextArrow color={form.designation && form.phoneNumber ? "#111B2B":"#CEDEF3"}/>
+        </Button>
+        <Confetti active={ onProps } config={ config }/>
+      </div>
+      {/* end of next and back button */}
           <section className="mx-auto w-1/4" style={{display: "flex", justifyContent: "center", flexDirection: "column" }}>
-          <h2 className="nunito" style={{fontWeight:"bold",fontSize:"34px"}}>Enter Your Details</h2>
+          <h2 className="nunito" style={{fontWeight:"bold",fontSize:"34px",marginTop:"-35px"}}>Enter Your Details</h2>
+        
             <Form style={{width:"430px"}}>
               <Field>
                 <Label htmlFor="designation">Designation</Label>
@@ -163,13 +173,9 @@ export default function AboutYourself() {
             </Form>
           </section>
         </div>
+        
       </Main>
-      <Foter style={{justifyContent:"space-between",fontWeight: "bold",marginTop:"-80px"}}>
-        <BackButton onClick={() => history.push("/onboard/signup/company")}><BackArrow/></BackButton>
-        <Button onClick={submit} disabled={!form.designation || !form.phoneNumber}><NextArrow color={form.designation && form.phoneNumber ? "#111B2B":"#CEDEF3"}/>
-        </Button>
-        <Confetti active={ onProps } config={ config }/>
-      </Foter>
+   
       {/* <div style={{marginBottom:"4rem"}}></div> */}
       </Layout ><Footer />
  </>
@@ -209,6 +215,5 @@ font-weight: bold;
 border: 3px solid #111B2B;
 box-sizing: border-box;
 border-radius: 14px;
-margin-top: -535px;
-margin-left:15px;
+
 `
