@@ -1,9 +1,9 @@
 import { GraphQLClient,gql } from 'graphql-request';
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export const client = new GraphQLClient(process.env.HASURA_KEYCLOAK_URL, {
+export const client = new GraphQLClient(process.env.NEXT_PUBLIC_HASURA_KEYCLOAK_URL, {
    headers: {
-      'x-hasura-admin-secret': process.env.ADMIN_SECRET,
+      'x-hasura-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET,
    }
 })
 

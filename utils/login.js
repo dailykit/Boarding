@@ -8,7 +8,7 @@ export const login = async ({ email, password }) => {
       grant_type: 'password',
       username: email.trim(),
       password: password.trim(),
-      client_id: process.env.KEYCLOAK_CLIENT,
+      client_id: process.env.NEXT_PUBLIC_KEYCLOAK_CLIENT,
     };
     const searchParams = Object.keys(params)
       .map((key) => {
@@ -19,7 +19,7 @@ export const login = async ({ email, password }) => {
 
     const response = await axios({
       method: 'POST',
-      url: `${process.env.KEYCLOAK_URL}/realms/accounts/protocol/openid-connect/token`,
+      url: `${process.env.NEXT_PUBLIC_KEYCLOAK_URL}/realms/accounts/protocol/openid-connect/token`,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
