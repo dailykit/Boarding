@@ -5,12 +5,11 @@ background: #fff;
 border-style: none;
 padding: 2px 10px 10px 5px;
 height: 2.5rem;
-position: absolute;
 width: 36px;
 height: 36px;
-left: 1460px;
-top: 330px;
-
+margin-top: -535px;
+margin-left:67rem;
+font-weight: bold;
 border: 3px solid #111B2B;
 box-sizing: border-box;
 border-radius: 14px;

@@ -11,7 +11,7 @@ const VerfiyEmailBanner = () => {
   const resend = async () => {
     try {
       const data = { id: user?.keycloakId };
-      const url = `${window._env_.PLATFORM_URL}/api/dailykit/verify/email`;
+      const url = `${window?._env_.PLATFORM_URL}/api/dailykit/verify/email`;
       await axios.post(url, data);
     } catch (error) {
       console.log(error);
