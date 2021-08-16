@@ -21,9 +21,9 @@ import Image from 'next/image';
 export const PaymentForm = () => {
    const { user } = useAuth();
    const [intent, setIntent] = React.useState(null)
-   console.log( process.browser && `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`)
+   console.log( process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
    const stripePromise = loadStripe(
-      process.browser && `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+     process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
    );
 console.log(stripePromise)
 

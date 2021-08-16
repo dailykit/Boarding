@@ -195,7 +195,7 @@ const Installation = () => {
     </div>
   );
 };
-const giphy = new GiphyFetch(process.browser && `${window._env_.GIPHY_KEY}`);
+const giphy = new GiphyFetch(process.env.GIPHY_KEY);
 const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };

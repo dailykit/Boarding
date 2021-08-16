@@ -1,4 +1,4 @@
-window._env_ = {
+process.env = {
   KEYCLOAK_URL: 'https://auth.dailykit.org/auth',
   KEYCLOAK_CLIENT: 'dashboard-dev',
   KEYCLOAK_REALM: 'accounts',

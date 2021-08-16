@@ -26,7 +26,7 @@ export const Navbar = () => {
           />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler navbar-dark"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -36,9 +36,11 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav special-styling me-auto mb-2 mb-lg-0">
         {!location.pathname.includes("onboard") ? (
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav special-styling me-auto mb-2 mb-lg-0" style={{marginLeft:"60rem"}}>
+       
+            <>
              {/* *******authenticated and not in onboard pages so 1signup/login 2)complete your signup 3)Logout */}
               <li className="nav-item">
                 {authenticated ? (<>
@@ -70,8 +72,8 @@ export const Navbar = () => {
                 )}
               </li>
               {/*authenticated and NOT IN ONBOARD PAGES so 1signup/login 2)complete your signup 3)Logout  ********/}
-            </ul>
-          </div>
+            </>
+         
 
 
 
@@ -80,20 +82,20 @@ export const Navbar = () => {
 
           // ONBOARD PAGES
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav special-styling me-auto mb-2 mb-lg-0">
+       
+            <>
               {/* if not authenticated and ONBOARD PAGES then 2 condtion 1)login or 2) signup */}
               {!authenticated ? (
 
                 <li className="nav-item">
                   <section className="username">
                   {!location.pathname.includes("login") ? (
-                        <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nunito"
+                        <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nav-link nunito"
                          onClick={() => location.push("/onboard/login")}>
                             LOG IN
                             </Styles.ghostButton>
                   ) : (
-                    <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nunito" 
+                    <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nav-link nunito" 
                          onClick={() => location.push("/onboard/signup")}>
                            SIGN UP
                             </Styles.ghostButton>)}
@@ -125,10 +127,11 @@ export const Navbar = () => {
 
                 </li>
               )}
-            </ul>
-          </div>
+            </>
+         
         )}
-
+        </ul>
+       </div>
       </div>
     </nav>
   );
