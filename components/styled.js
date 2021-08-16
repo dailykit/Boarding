@@ -7,8 +7,6 @@ padding: 2px 10px 10px 5px;
 height: 2.5rem;
 width: 36px;
 height: 36px;
-margin-top: -535px;
-margin-left:67rem;
 font-weight: bold;
 border: 3px solid #111B2B;
 box-sizing: border-box;
