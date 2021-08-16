@@ -99,7 +99,7 @@ export default function Company() {
         <Main>
           {!user?.keycloak?.email_verified && <VerifyEmailBanner />}
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem", marginTop:"2.4rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
+            <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem", marginTop:"2.6rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
               <Form style={{ fontWeight: "bold",width: "380px" }}>
                 <h2 className="nunito" style={{marginTop:"20px",fontWeight:"bold",fontSize:"34px"}}>Enter Company Details</h2>
                 <Field>
@@ -238,7 +238,7 @@ export default function Company() {
         </Main>
         <Foter>
         <Confetti active={onProps} config={config} />
-          <Button onClick={save} disabled={!form.company} style={{ "fontWeight": "bold",marginTop:"-80px" }}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
+          <Button onClick={save} disabled={!form.company} style={{marginTop:"-38.3rem", marginLeft:"65.6rem"}}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
           </Button>
          
         </Foter>

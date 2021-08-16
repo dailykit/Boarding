@@ -113,10 +113,10 @@ export default function AboutYourself() {
     <Layout>
       <Main>
         {!user?.keycloak?.email_verified && <VerifyEmailBanner />}
-        <div style={{ display: "flex", justifyContent: "center", margin: "0rem 0 2rem" }}>
+        <div style={{ display: "flex", justifyContent: "center", margin: "2.3rem 0 2rem" }}>
           <section className="mx-auto w-1/4" style={{display: "flex", justifyContent: "center", flexDirection: "column" }}>
           <h2 className="nunito" style={{fontWeight:"bold",fontSize:"34px"}}>Enter Your Details</h2>
-            <Form>
+            <Form style={{width:"430px"}}>
               <Field>
                 <Label htmlFor="designation">Designation</Label>
                 <Input
@@ -132,6 +132,7 @@ export default function AboutYourself() {
              
               <Field>
                 <Label htmlFor="phoneNumber" >Phone Number</Label>
+                <div style={{"display":"flex","flexDirection":"row"}}>
                 <ImageIcon ><Flag/> </ImageIcon><SelectIcon ><select
                     name="phoneid"
                     id="phoneid"
@@ -145,13 +146,13 @@ export default function AboutYourself() {
                   type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
-                  style={{marginLeft:"120px",width:"94.2%"}}
+                  style={{marginLeft:"40px"}}
                   required
                   minlength="10"
-                  value={form.phoneNumber}
+                  value={form.phoneNumber}pp
                   onChange={(e) => handleChange(e)}
                   placeholder="Enter your phone number"
-                />
+                /></div>
               </Field>
               {error && (
             <Error>{error}</Error>
@@ -164,8 +165,8 @@ export default function AboutYourself() {
         </div>
       </Main>
       <Foter style={{justifyContent:"space-between",fontWeight: "bold",marginTop:"-80px"}}>
-        <BackButton onClick={() => history.push("/onboard/signup/company")} style={{ "fontWeight": "bold",marginTop:"-80px" }}><BackArrow/></BackButton>
-        <Button onClick={submit} disabled={!form.designation || !form.phoneNumber} style={{ "fontWeight": "bold",marginTop:"-80px" }}><NextArrow color={form.designation && form.phoneNumber ? "#111B2B":"#CEDEF3"}/>
+        <BackButton onClick={() => history.push("/onboard/signup/company")}><BackArrow/></BackButton>
+        <Button onClick={submit} disabled={!form.designation || !form.phoneNumber}><NextArrow color={form.designation && form.phoneNumber ? "#111B2B":"#CEDEF3"}/>
         </Button>
         <Confetti active={ onProps } config={ config }/>
       </Foter>
@@ -177,19 +178,18 @@ export default function AboutYourself() {
 
 
 const ImageIcon=styled.span
-`position: absolute;
+`
+flex: 1 1;
 width: 30px;
 height: 30px;
-left: 768px;
-top: 478px;`
+`
 
 
 const SelectIcon=styled.span
-`position: absolute;
+` 
+flex:0 0;
 width: 30px;
-height: 30px;
-left: 810px;
-top: 473px;`
+height: 30px;`
 
 const Error=styled.span`
 justify-self: start;
@@ -203,12 +203,12 @@ background: #fff;
 border-style: none;
 padding: 2px 10px 10px 5px;
 height: 2.5rem;
-position: absolute;
 width: 36px;
 height: 36px;
-left: 360px;
-top: 330px;
+font-weight: bold;
 border: 3px solid #111B2B;
 box-sizing: border-box;
 border-radius: 14px;
+margin-top: -535px;
+margin-left:15px;
 `
