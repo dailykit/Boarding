@@ -268,7 +268,7 @@ const CARD_ELEMENT_OPTIONS = {
 
 // query for stripeCustomerId and organization for intent
 const ORGANIZATION_ADMINS = gql`
-query organizations($where: organization_organizationAdmin_bool_exp = {}) {
+query organizations($where: organization_organizationAdmin_bool_exp! ) {
    organizationAdmins(where: $where) {
      stripeCustomerId
      organization {
