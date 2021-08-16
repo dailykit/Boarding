@@ -1,5 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
+console.log(process.env.STRIPE_SECRET_KEY)
 const create = async (req, res) => {
   try {
      const { customer } = req.body

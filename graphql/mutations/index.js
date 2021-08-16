@@ -48,7 +48,7 @@ export const INSERT_COMPANY_MENU_IMPORT = gql`
    }
 `
 export const UPDATE_ORGANIZATION_ADMINS_BY_STRIPE_CUSTOMER_ID= gql`
-mutation updateOrganizationAdmins($_set: organization_organizationAdmin_set_input={}, $where: organization_organizationAdmin_bool_exp!) {
+mutation updateOrganizationAdmins($_set: organization_organizationAdmin_set_input!, $where: organization_organizationAdmin_bool_exp!) {
   updateOrganizationAdmins(where: $where, _set: $_set) {
     returning {
       id
@@ -58,7 +58,7 @@ mutation updateOrganizationAdmins($_set: organization_organizationAdmin_set_inpu
 }
 `
 export const UPDATE_ORGANIZATION_ADMINS_BY_STRIPE_PAYMENT_METHOD_ID= gql`
-mutation updateOrganizationAdmins($_set: organization_organizationAdmin_set_input={}, $where: organization_organizationAdmin_bool_exp!) {
+mutation updateOrganizationAdmins($_set: organization_organizationAdmin_set_input!, $where: organization_organizationAdmin_bool_exp!) {
   updateOrganizationAdmins(where: $where, _set: $_set) {
     returning {
       id
