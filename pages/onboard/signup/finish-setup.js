@@ -137,7 +137,7 @@ const Installation = () => {
         _set: {
           instanceRequested: true,
           onboardStatus: "FINISH_SETUP",
-          organizationUrl: `${name}.dailykit.org`,
+          organizationUrl: `${name}.dailykit.app`,
         },
       },
     });
@@ -165,7 +165,7 @@ const Installation = () => {
             value={name}
             autoComplete="off"
             placeholder="Enter your subdomain"
-            onChange={(e) => {setName(e.target.value.trim()); handleUrlExists(e.target.value.trim()+".dailykit.org")}}
+            onChange={(e) => {setName(e.target.value.trim()); handleUrlExists(e.target.value.trim()+".dailykit.app")}}
             style={{display:"inline",marginBottom:"15px"}}
           />
           <Button
@@ -176,7 +176,7 @@ const Installation = () => {
           {loading ? "Saving" : "SAVE"}
         </Button> 
         <br/>
-          <Para className="text-left nunito" style={{fontWeight:"600",fontSize:"18px"}} >{name}.dailykit.org</Para>
+          <Para className="text-left nunito" style={{fontWeight:"600",fontSize:"18px"}} >{name}.dailykit.app</Para>
           
           <div style={{marginLeft:"10rem"}}><Confetti active={ onProps } config={ config }/></div>
           
