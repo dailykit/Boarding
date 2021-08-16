@@ -4,13 +4,13 @@ import { useLazyQuery } from "@apollo/client";
 
 import Link from 'next/link'
 import { useRouter } from "next/router";
-import { Label, Main,Input,Field } from "../../../components/styled";
+import { Label, Main, Input, Field } from "../../../components/styled";
 import * as utils from "../../../utils";
 
 import { useAuth } from "../../../store/auth";
 import { ADMIN_EXISTS } from "../../../graphql";
-import  Footer from "../../../components/Footer";
-import Layout  from "../../../components/Layout";
+import Footer from "../../../components/Footer";
+import Layout from "../../../components/Layout";
 
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ export default function Signup() {
     onCompleted: ({ admins = [] }) => {
       if (admins.length > 0) {
         setError("Email already exists!");
-      } 
+      }
       else {
         setError("");
       }
@@ -55,7 +55,7 @@ export default function Signup() {
     !error;
 
   const onChange = (e) => {
-  
+
     const { name, value } = e.target;
     setForm((form) => ({
       ...form,
@@ -63,15 +63,15 @@ export default function Signup() {
     }));
   };
 
-   // for validation
+  // for validation
   React.useEffect(() => {
-      form.email && validEmail(validator.isEmail(form.email));
-      form.firstName && validFirstName(validator.isAlpha(form.firstName));
-      form.lastName && validLastName(validator.isAlpha(form.lastName));
-    if(!email || !FirstName || !LastName) {
-      setError2("Please check your credientials"); 
+    form.email && validEmail(validator.isEmail(form.email));
+    form.firstName && validFirstName(validator.isAlpha(form.firstName));
+    form.lastName && validLastName(validator.isAlpha(form.lastName));
+    if (!email || !FirstName || !LastName) {
+      setError2("Please check your credientials");
     }
-    else { 
+    else {
       setError2("");
     }
   })
@@ -110,89 +110,89 @@ export default function Signup() {
 
 
   return (
-   <>
-    <Layout>
-      <Main>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-7 col-md-offset-3">
-          <Panel style={{fontWeight:"bold"}}>
-          <h2 style={{marginTop:"20px",fontWeight:"bold",fontSize:"36px"}}>Register</h2>
-          <Field style={{"marginTop":"0.5rem"}}>
-            <Label htmlFor="firstName">First Name</Label>
-            <Input
-              type="firstName"
-              name="firstName"
-              id="firstName"
-              required
-              value={form.firstName}
-              onChange={onChange}
-              placeholder="Enter your first name"
-            />
-          </Field>
-          <Field style={{"marginTop":"0.5rem"}}>
-            <Label htmlFor="lastName">Last Name</Label>
-            <Input
-              type="lastName"
-              name="lastName"
-              required
-              value={form.lastName}
-              onChange={onChange}
-              placeholder="Enter your last name"
-            />
-          </Field>
-          <Field style={{"marginTop":"0.5rem"}}>
-            <Label htmlFor="email">Email</Label>
-            <Input
-              type="email"
-              name="email"
-              value={form.email}
-              required
-              onChange={onChange}
-              placeholder="Enter your email"
-              onBlur={(e) => handleEmailExists(e.target.value.trim())}
-            />
-            {error && (
-            <Error>{error}</Error>
-          )}
-          </Field>
-          <Field style={{"marginTop":"0.5rem"}}>
-            <Label htmlFor="password">Password</Label>
-            <Input
-              name="password"
-              type="password"
-              required
-              onChange={onChange}
-              value={form.password}
-              placeholder="Enter your password"
-            />
-          </Field>
-          <Link href="/onboard/login">
-            <button className="bold" style={{margin:"0.4rem 0 0.4rem -17rem",fontWeight:"bold" }}>
-              Login instead?
-            </button>
-          </Link>
-          <Submit
-            style={{ marginTop: "0.2rem" }}
-            className={!isValid || submitting ? "disabled" : ""}
-            onClick={(e) => (isValid || !submitting) && submit()}
-            disabled={!form.firstName || !form.lastName || !form.email || !form.password ||!email || !FirstName || !LastName || error}
-          > {submitting ? <>SUBMITTING<Ellipse/></>:"SUBMIT" }
-          </Submit>
-          {error2 && (
-            <Error>{error2}</Error>
-          )}
-        </Panel>
-        </div>
-        <div className="col-md-5 col-md-offset-3" style={{"marginTop":"100px"}}>
-        <Image width="300px"
-         height="300px"
-          src='/assets/images/LoginPage.png'
-          alt="login-page"/>
-          </div>
-        </div></div>
-      </Main>
-       </Layout>
+    <>
+      <Layout>
+        <Main>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-7 col-md-offset-3">
+                <Panel style={{ fontWeight: "bold" }}>
+                  <h2 style={{ marginTop: "20px", fontWeight: "bold", fontSize: "36px" }}>Register</h2>
+                  <Field style={{ "marginTop": "0.5rem" }}>
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input
+                      type="firstName"
+                      name="firstName"
+                      id="firstName"
+                      required
+                      value={form.firstName}
+                      onChange={onChange}
+                      placeholder="Enter your first name"
+                    />
+                  </Field>
+                  <Field style={{ "marginTop": "0.5rem" }}>
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input
+                      type="lastName"
+                      name="lastName"
+                      required
+                      value={form.lastName}
+                      onChange={onChange}
+                      placeholder="Enter your last name"
+                    />
+                  </Field>
+                  <Field style={{ "marginTop": "0.5rem" }}>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      required
+                      onChange={onChange}
+                      placeholder="Enter your email"
+                      onBlur={(e) => handleEmailExists(e.target.value.trim())}
+                    />
+                    {error && (
+                      <Error>{error}</Error>
+                    )}
+                  </Field>
+                  <Field style={{ "marginTop": "0.5rem" }}>
+                    <Label htmlFor="password">Password</Label>
+                    <Input
+                      name="password"
+                      type="password"
+                      required
+                      onChange={onChange}
+                      value={form.password}
+                      placeholder="Enter your password"
+                    />
+                  </Field>
+                  <Link href="/onboard/login">
+                    <button className="bold" style={{ margin: "0.4rem 0 0.4rem -17rem", fontWeight: "bold" }}>
+                      Login instead?
+                    </button>
+                  </Link>
+                  <Submit
+                    style={{ marginTop: "0.2rem" }}
+                    className={!isValid || submitting ? "disabled" : ""}
+                    onClick={(e) => (isValid || !submitting) && submit()}
+                    disabled={!form.firstName || !form.lastName || !form.email || !form.password || !email || !FirstName || !LastName || error}
+                  >  {submitting ? "Submitting" : "Submit"}
+                  </Submit>
+                  {error2 && (
+                    <Error>{error2}</Error>
+                  )}
+                </Panel>
+              </div>
+              <div className="col-md-5 col-md-offset-3" style={{ "marginTop": "100px" }}>
+                <Image width="300px"
+                  height="300px"
+                  src='/assets/images/LoginPage.png'
+                  alt="login-page" />
+              </div>
+            </div></div>
+        </Main>
+      </Layout>
       <Footer />
     </>
   );
@@ -220,7 +220,7 @@ border: 3px dashed white;
 box-sizing: border-box;
 `
 
-const Error=styled.span`
+const Error = styled.span`
 justify-self: start;
 display: block;
 --tw-text-opacity: 1;

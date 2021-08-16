@@ -213,8 +213,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
             type="submit"
             style={{ marginTop: "1.2rem" , marginLeft: "0.3%"}}
             className={ submitting ? "disabled" : ""}
-          >SUBMIT
-            {submitting && <Ellipse/>}
+          >{submitting ? 'Saving...' : 'Save'}
           </Submit>
             {error && <span tw="block text-red-500 mt-2">{error}</span>}
          </form>
@@ -326,9 +325,3 @@ padding-bottom: 40px;
 }
 
 `;
-const Ellipse = styled.span`
-width: 22px;
-height: 22px;
-
-border: 3px dashed #FFFFFF;
-box-sizing: border-box;`
