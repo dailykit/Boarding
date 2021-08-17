@@ -7,8 +7,8 @@ export default class Home extends PureComponent {
     return (
       <div>
         <BannerSection2
-          headingSize="60px"
-          highlightSize="80px"
+          headingSize2="3.75rem"
+          highlightSize="5rem"
           backgroundColor="#111B2B"
           rightimageurl="/assets/images/phone.gif"
           heading={"Get your share of subscription Revenue at "}
@@ -20,7 +20,7 @@ export default class Home extends PureComponent {
         />
         <VideoBanner/>
         <BannerSection2
-          headingSize="44px"
+          headingSize="2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
           rightimageurl={"/assets/images/ImageBanner1.png"}
@@ -32,11 +32,12 @@ export default class Home extends PureComponent {
             "Give your customers the control to choose from Item Count, Servings & Delivery Week-Day.",
             "Increase Conversions by funneling Customers to preview menus prior to signing up.",
           ]}
+          imageFirst
           height="546px"
           width="546px"
         />
         <BannerSection2
-          headingSize="44px"
+          headingSize="2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
           leftimageurl={"/assets/images/Fold 3.png"}
@@ -53,11 +54,12 @@ export default class Home extends PureComponent {
             "Precise Zip-Code Based Geo-Fencing for Delivery",
             "Configure Your Delivery Days",
           ]}
+          
           height="546px"
           width="546px"
         />
         <BannerSection2
-          headingSize="44px"
+          headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
           rightimageurl={"/assets/images/Fold 5.png"}
@@ -70,10 +72,11 @@ export default class Home extends PureComponent {
             "Bulk Actions for Ease of Use so that you can Add Menu Items into multiple plans at once with ease",
             "Got a Premium Product? Add and price to it using Add On Prices."
           ]}
+          imageFirst
           height="530px"
           width="460px"
         /><BannerSection2
-          headingSize="44px"
+          headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
           leftimageurl={"/assets/images/Fold 6.png"}
@@ -91,10 +94,11 @@ export default class Home extends PureComponent {
             "Add Enticing product descriptions to Convert More",
             "Fully Integrated Social Media sharing for every product page",
           ]}
+         
           height="494px"
           width="546px"
         /><BannerSection2
-          headingSize="44px"
+          headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
           rightimageurl={"/assets/images/Fold 7.png"}
@@ -108,6 +112,7 @@ export default class Home extends PureComponent {
             "Create Smart Rewards, Vouchers and Coupons using our CRM",
             "Delivery Integrations Supporting Selected Delivery Partners from your locality"
           ]}
+          imageFirst
           height="590px"
           width="550px"
         />
