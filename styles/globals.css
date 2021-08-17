@@ -1698,6 +1698,21 @@ color: #1374F6;
 .ml-15{
   margin-left: -15px;
 }
+.mt-60px{
+  margin-top: 60px; 
+}
+.mb--40px{
+  margin-bottom: -40px; 
+}
+.mb-40px{
+  margin-bottom: 40px;
+}
+.mb-80px{
+  margin-bottom: 80px; 
+}
+.mb--40px{
+  margin-bottom: -40px; 
+}
 @media only screen and (max-width: 479px) {
   .headingSize,.headingSize3{
     font-size: 2rem;
@@ -1728,4 +1743,29 @@ color: #1374F6;
   padding: 0 7px 0 7px;
   margin-right: 85px;
 }
+.footer-links{
+font-size: 16px;
 }
+.copyright {
+  font-size: 16px;
+}
+.container {
+  margin-bottom: 0vh;
+}
+.mb-40px{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.mb-80px{
+  margin-top: 25px;
+  margin-bottom: 20px; 
+}
+.mt-60px{
+  margin-top: 10px; 
+}
+.mb--40px{
+  margin-bottom: 10px; 
+}
+.wrap{
+  text-align: center;
+}}
