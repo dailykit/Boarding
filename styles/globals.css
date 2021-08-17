@@ -132,7 +132,7 @@ ul.link_container {
 
 /* footer-styling */
 .copyright {
-  font-family:Work Sans;
+  font-family:'Work Sans', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   text-align: center;
@@ -1172,7 +1172,7 @@ border-radius: 12px;
   padding: 110px 0px 80px;
 }
 .schedule-meeting-box1 {
-  margin: 0px 0px 40px;
+  margin: 10px 0px 40px;
   padding: 0px 15px;
   font-size: 14px;
 }
@@ -1196,7 +1196,6 @@ border-radius: 12px;
 }
 .schedule-meeting-box1 div .answer {
   position: relative;
-  font-size: 20px;
   margin: 5px 0px 0px;
   color: #111b2b;
 }
@@ -1638,7 +1637,7 @@ border-radius: 9999px;
 }
 .label{
   display:block;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1665,7 +1664,7 @@ color:white;
     outline-offset: 2px;
   }
 .footer-links{
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;;
 font-style: normal;
 font-weight: 400;
 font-size: 26px;
@@ -1675,11 +1674,58 @@ text-transform: capitalize;
 color: #CEDEF3;
 }
 .moreFeatures{
-  font-family: Work Sans;
+  font-family:'Work Sans', sans-serif;;
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 20px;
 margin-left: 420px;
 color: #1374F6;
+}
+/* homepage */
+.headingSize{
+  font-size: 2.75rem;
+}
+.headingSize2{
+  font-size: 3.75rem;
+}
+.highlightSize{
+  font-size: 5rem;
+}
+.descriptionSize{
+  font-size: 20px;
+}
+.ml-15{
+  margin-left: -15px;
+}
+@media only screen and (max-width: 479px) {
+  .headingSize,.headingSize3{
+    font-size: 2rem;
+  }
+  .headingSize2{
+    font-size: 3rem;
+  }
+  .highlightSize{
+    font-size: 4rem;
+  }
+  .descriptionSize{
+    font-size: 18px;
+  }
+  .container {
+    margin-bottom: -20vh;
+}
+.ml-15{
+  margin-left: 0px;
+}
+.schedule-meeting-box1 {
+  margin-top: -10px;
+}
+.schedule-meeting-box1 div .question {
+  font-size:20px;
+}
+.nav-item{
+  margin-left: 65px;
+  padding: 0 7px 0 7px;
+  margin-right: 85px;
+}
 }
