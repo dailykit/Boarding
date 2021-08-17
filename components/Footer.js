@@ -16,7 +16,7 @@ const Footer = () => {
             /></div>
         </div></div>
       <div className="container mb-40px">
-        <div className="row wrap">
+        <div className="row wrap-center">
           <h5 className="col-md-2 col-xs-6 footer-links">
             About Us
           </h5>

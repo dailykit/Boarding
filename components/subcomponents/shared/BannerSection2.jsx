@@ -5,7 +5,7 @@ export default class BannerSection2 extends PureComponent {
     return (
       <div style={{backgroundColor: this.props?.backgroundColor, marginTop:"5rem"}}>
       <div className="container nunito" >
-        <div className="row justify-content-center text-center" style={{"flexDirection":this.props.imageFirst && "column-reverse"}}>
+        <div className="row justify-content-center text-center" id={this.props.imageFirst &&"columnReverse"}>
           {this.props.leftimageurl && (
             <div className="col-md-6 col-xs-10 leftimage1" style={{"marginTop":"100px"}}>
               <Image

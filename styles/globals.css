@@ -200,73 +200,7 @@ ul.link_container {
     margin-bottom: 5rem;
   }
 }
-.imagebox5 {
-  background-image: url("/assets/images/order-dashboard/Order fulfillment.png");
-  background-position: center;
-}
-.imagebox6 {
-  background-image: url("/assets/images/order-dashboard/sales & revenues.png");
-  background-position: center;
-}
-.imagebox7 {
-  background-image: url("/assets/images/order-dashboard/inventory usage.png");
-  background-position: center;
-}
-.imagebox8 {
-  background-image: url("/assets/images/order-fulfilment/pickup insights.png");
-  background-position: center;
-}
-.imagebox9 {
-  background-image: url("/assets/images/order-fulfilment/self delivery reports.png");
-  background-position: center;
-}
-.imagebox10 {
-  background-image: url("/assets/images/order-fulfilment/delivery partner.png");
-  background-position: center;
-}
-/* .imagebox11 {
-  background-image: url("/assets/images/order-dashboard/order-dashboard-hero2@2x.png");
-  background-position: left;
-  background-size: 130vh;
-  background-repeat: no-repeat;
-  height: 80vh;
-} */
 
-.imagebox12 {
-  background-image: url("/assets/images/order-dashboard/order-dashboard-hero2@2x.png");
-}
-.imagebox13 {
-  background-image: url("/assets/images/order-dashboard/DailyOS-Notifications@2x.png");
-}
-.imagebox14 {
-  background-image: url("/assets/images/order-dashboard/DailyOS-Notifications@2x.png");
-}
-.imagebox15 {
-  background-image: url("/assets/images/order-dashboard/print-KOTs@2x.png");
-  background-position: center;
-}
-.imagebox16 {
-  background-image: url("/assets/images/order-dashboard/print-KOTs@2x.png");
-}
-.imagebox17 {
-  background-image: url("/assets/images/order-dashboard/print-KOTs@2x.png");
-}
-/* used in page-'order-routing-and-kitchen-display-system' */
-.imagebox18 {
-  background-image: url("/assets/images/order-routing/Digitalize-Kitchen-Operation5@2x.png");
-  background-position: left;
-  background-size: 200vh;
-  background-repeat: no-repeat;
-  height: 90vh;
-}
-/* used in page-'order-fulfillment' */
-
-.imagebox20 {
-  background-image: url("/assets/images/order-fulfilment/delivery@2x.png");
-}
-/* .accompaniments_image {
-  background-image: url("https://dailykit-244-www.s3.us-east-2.amazonaws.com/file-export-5773385-1620227535366-0/dailykit-assets/hardwareee.png");
-} */
 .onDemandCategories {
   list-style-type:disc;
   font-family: Work Sans;
@@ -1695,6 +1629,7 @@ color: #1374F6;
 .descriptionSize{
   font-size: 20px;
 }
+/* footer */
 .ml-15{
   margin-left: -15px;
 }
@@ -1713,7 +1648,15 @@ color: #1374F6;
 .mb--40px{
   margin-bottom: -40px; 
 }
+#columnReverse{
+  flex-direction: row;
+}
+/* video-banner */
+.mt-120px{
+  margin-top: 120px;
+}
 @media only screen and (max-width: 479px) {
+  /* homepage */
   .headingSize,.headingSize3{
     font-size: 2rem;
   }
@@ -1726,6 +1669,7 @@ color: #1374F6;
   .descriptionSize{
     font-size: 18px;
   }
+  /* footer */
   .container {
     margin-bottom: -20vh;
 }
@@ -1766,6 +1710,14 @@ font-size: 16px;
 .mb--40px{
   margin-bottom: 10px; 
 }
-.wrap{
+.wrap-center{
   text-align: center;
-}}
+}
+#columnReverse{
+  flex-direction: column-reverse;
+}
+/* video-banner */
+.mt-120px{
+  margin-top: 0px;
+}
+}
