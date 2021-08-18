@@ -21,7 +21,7 @@ export default function Pricing() {
             <Main>
               {!user?.keycloak?.email_verified && <VerifyEmailBanner />}
               <section className="mt-4 w-2/4">
-              <h2 className="nunito onboarding-heading" style={{fontWeight:"bold",textAlign:"left",marginLeft:"32px"}}>Pricing</h2>
+              <h2 className="nunito onboarding-heading2" style={{fontWeight:"bold",textAlign:"left",marginLeft:"32px"}}>Pricing</h2>
                
                 <div className="nunito pricingsection2">
               </div>

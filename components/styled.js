@@ -10,12 +10,16 @@ height: 36px;
 font-weight: bold;
 border: 3px solid #111B2B;
 box-sizing: border-box;
+margin-right:20px;
 border-radius: 14px;
    &:disabled {
       cursor: not-allowed;
       border: 3px solid #CEDEF3;
       color: #CEDEF3;
    }
+   @media (max-width: 479px) {
+      margin-right:0px;
+    }
 `
 
 export const GhostButton = styled.button`
@@ -56,6 +60,11 @@ export const Main = styled.main`
    background: #ffffff;
    margin: 13px 0px 0 16px;
    height:90vh;
+   @media (max-width: 479px) {
+      padding-left: 25px;
+      margin: 13px 0px 0 0px;
+      height:fit-content;
+    }
 `
 
 export const H2 = styled.h2`
@@ -79,7 +88,7 @@ text-align:center;
 
 export const Form = styled.form`
 font-family: "Nunito", sans-serif;
-   width: 320px;
+   width: 380px;
    #terms__label {
       color: #555b6e;
       margin-left: 0.5rem;
@@ -95,6 +104,9 @@ font-family: "Nunito", sans-serif;
          }
       }
    }
+   @media (max-width: 479px) {
+      width: 300px;
+    }
 `
 
 export const Field = styled.div`
@@ -128,6 +140,13 @@ font-family: "Nunito", sans-serif;
          }
       }
    }
+   @media (max-width: 479px) {
+      input,select{
+         width: 308px;
+      }
+      label {
+         font-size:16px;
+      }
 `
 
 export const Label = styled.label`

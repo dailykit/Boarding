@@ -102,13 +102,13 @@ export default function Company() {
             {/* next button */}
           <div style={{display: "flex",justifyContent: "flex-end" ,fontWeight: "bold"}}>
           <Confetti active={onProps} config={config} />
-          <Button onClick={save}  style={{marginRight:"20px"}} disabled={!form.company}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
+          <Button onClick={save} disabled={!form.company}><NextArrow color={form.company ? "#111B2B":"#CEDEF3"}/>
           </Button>
         </div>
         {/* end of next button */}
             <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
-              <Form style={{ fontWeight: "bold",width: "380px" }}>
-                <h2 className="nunito" style={{marginTop:"-38px",fontWeight:"bold",fontSize:"34px"}}>Enter Company Details</h2>
+              <Form style={{ fontWeight: "bold"}}>
+                <h2 className="nunito onboarding-heading" style={{marginTop:"-38px",fontWeight:"bold"}}>Enter Company Details</h2>
                 <Field>
                   <Label htmlFor="company">Company Name</Label>
                   <Input

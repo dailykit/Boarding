@@ -53,7 +53,8 @@ const Styles = {
     margin-bottom: 1rem;
     grid-template-columns: 96px 1fr;
     @media (max-width: 479px) {
-      height: 12rem;
+      height: 13rem;
+      margin:0 0 0 0;
   }
   `,
   Aside: styled.aside`
@@ -112,7 +113,7 @@ const Styles = {
     }
     @media (max-width: 479px) {
     button{
-      margin-bottom: 6rem;
+      margin-bottom: 3rem;
       padding-top: 0.1rem;
       padding-bottom: 0.1rem;
       padding-left: 0.7rem;
@@ -123,9 +124,15 @@ const Styles = {
       margin-top: 2rem;
     }
     p{
+      width:150px;
       font-size: 0.7rem;
       line-height: 1rem;
     }
+    span{
+      left: 313px;
+      top: 650px;
+    }
+
   }
   `,
 };

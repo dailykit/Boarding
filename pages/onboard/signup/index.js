@@ -115,9 +115,9 @@ export default function Signup() {
         <Main>
           <div className="container">
             <div className="row">
-              <div className="col-md-7 col-md-offset-3">
+              <div className="col-md-7 col-xs-10">
                 <Panel style={{ fontWeight: "bold" }}>
-                  <h2 style={{ marginTop: "20px", fontWeight: "bold", fontSize: "36px" }}>Register</h2>
+                  <h2 className="onboarding-heading" style={{ marginTop: "20px", fontWeight: "bold" }}>Register</h2>
                   <Field style={{ "marginTop": "0.5rem" }}>
                     <Label htmlFor="firstName">First Name</Label>
                     <Input
@@ -168,7 +168,7 @@ export default function Signup() {
                     />
                   </Field>
                   <Link href="/onboard/login">
-                    <button className="bold" style={{ margin: "0.4rem 0 0.4rem -17rem", fontWeight: "bold" }}>
+                    <button className="bold ml--17rem" style={{fontWeight: "bold" }}>
                       Login instead?
                     </button>
                   </Link>
@@ -184,7 +184,7 @@ export default function Signup() {
                   )}
                 </Panel>
               </div>
-              <div className="col-md-5 col-md-offset-3" style={{ "marginTop": "100px" }}>
+              <div className="col-md-5 col-xs-10" style={{ "marginTop": "100px" }}>
                 <Image width="300px"
                   height="300px"
                   src='/assets/images/LoginPage.png'
@@ -273,6 +273,9 @@ padding-bottom: 36px;
   border-radius: 15px;
   cursor: not-allowed;
  
+}
+@media (max-width: 479px) {
+  width: 80.5%;
 }
 
 `;

@@ -1669,6 +1669,9 @@ color: #1374F6;
 .onboarding-heading{
   font-size: 36px;
 }
+.onboarding-heading2{
+  font-size: 36px;
+}
 /* about-yourself */
 #phoneNumber{
   margin-left:40px
@@ -1703,8 +1706,15 @@ color: #1374F6;
   font-size: 24px;
   margin-left:50px ;
 }
+.onboarding-heading2{
+  font-size: 26px;
+  margin-left:10px;
+}
 /* end of register,company */
-
+/* card-details page */
+.pl-0{
+  padding-left: 0;
+}
 /* about-yourself */
 #phoneNumber{
   margin-left:40px;

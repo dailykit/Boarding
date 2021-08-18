@@ -179,12 +179,12 @@ const CardSetupForm = ({ intent, handleResult }) => {
       <>
       <Layout>
          <Main>
-         <div className="container">
+         <div className="container pl-0">
           <div className="row justify-content-between">
             <div className="col-md-7 col-md-offset-3">
-            <form onSubmit={handleSubmit} className="container">
+            <form onSubmit={handleSubmit} className="container pl-0">
             <div className="row">
-            <h2 className="nunito" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold",fontSize:"34px"}}>Enter your Payment Details</h2>
+            <h2 className="nunito onboarding-heading2" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold"}}>Enter your Payment Details</h2>
                <div className="col-md-12 col-sm-12 wrapper" style={{marginLeft: "12px"}}>
                   <section className="mb-3 mt-4" style={{padding:"6px 12px 6px 12px"}}>
                      <label htmlFor="name" className="label">
