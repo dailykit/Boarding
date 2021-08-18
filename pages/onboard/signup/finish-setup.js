@@ -262,7 +262,7 @@ const GifCycle = () => {
           </Para>
         </header>
       )}
-      <section style={{marginLeft:"2%",minWidth:"70vw",marginTop:"1.5%"}}>{gifs.length > 0 && <RenderGif gifs={gifs} />}</section>
+      <section className="finish-setup-gifs">{gifs.length > 0 && <RenderGif gifs={gifs} />}</section>
     </div>
   );
 };
