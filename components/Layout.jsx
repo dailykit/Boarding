@@ -90,7 +90,8 @@ const Styles = {
       margin-top: 2rem;
       @media (max-width: 479px) {
          display: inline-block;
-      overflow:visible;
+         overflow:visible;
+         width:360px;
        }
       ${({ hideSteps }) =>
          hideSteps
@@ -121,7 +122,7 @@ const Styles = {
          display: inline-block;
          grid-area: footer;
          padding-left:1.6rem;
-         padding-top:2rem;
+         padding-top:7rem;
        } `,
    Stage: styled.ul(
       ({ height1, height2 }) => css`
