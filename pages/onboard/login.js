@@ -118,7 +118,9 @@ const Panel = styled.section`
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 10rem;
-`;
+  @media (max-width: 479px) {
+    width: 230px;
+  }`;
 
 const FieldSet = styled.fieldset`
 width: 100%;
