@@ -1662,6 +1662,9 @@ color: #1374F6;
   min-width:70vw;
   margin-top:1.5% ;
 }
+.onboardingheading3{
+  font-size: 34px;
+}
 /* register */
 .ml--17rem{
   margin: 0.4rem 0 0.4rem -17rem;
@@ -1720,6 +1723,10 @@ color: #1374F6;
   margin-left:40px;
   width: 210px;
 
+}
+/* finish-setup */
+.onboardingheading3{
+  font-size: 26px;
 }
 /* pricing-page */
 .pricing-button {

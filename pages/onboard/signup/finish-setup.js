@@ -150,7 +150,7 @@ const Installation = () => {
           <div className="row">
           
       <div className="col-md-6 finishSetupSection mx-auto" >
-      <h2 className="nunito" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold",fontSize:"34px"}}>Customize your URL</h2>
+      <h2 className="nunito onboardingheading3" style={{marginTop:"20px",marginBottom:"39px",fontWeight:"bold"}}>Customize your URL</h2>
         <Para>
           This is where you will access your apps <br/>
           and manage your team. Make sure to<br/>

@@ -112,6 +112,7 @@ const Styles = {
       top: 129px;
     }
     @media (max-width: 479px) {
+      padding-right: 0px;
     button{
       margin-bottom: 3rem;
       padding-top: 0.1rem;
@@ -122,6 +123,7 @@ const Styles = {
     }
     h3{
       margin-top: 2rem;
+      font-size:22px;
     }
     p{
       width:150px;
