@@ -45,10 +45,10 @@ export const Navbar = () => {
               <li className="nav-item">
                 {authenticated ? (<>
                   {user?.organization?.onboardStatus != "FINISH_SETUP" ? (
-                   <Styles.ghostButton style={{color:"white"}}
-                   className="nav-link" onClick={()=>location.push('/onboard/signup/company')}>
+                  <button type="button" className="nav-link btn-style-fourteen mt-4"
+                  onClick={()=>location.push('/onboard/signup/company')}>
                   Complete your Signup
-                 </Styles.ghostButton>) : (
+                 </button>) : (
                  <Styles.ghostButton 
                       className="nav-link"
                       style={{backgroundColor:"white",color:"black",display:"inline",marginRight:"1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
