@@ -61,7 +61,7 @@ export const Main = styled.main`
    margin: 13px 0px 0 16px;
    height:90vh;
    @media (max-width: 479px) {
-      padding-left: 25px;
+      overflow: hidden;
       margin: 13px 0px 0 0px;
       height:fit-content;
     }
