@@ -1072,6 +1072,7 @@ ul.link_container {
   line-height: 1em;
   font-family: "Nunito", sans-serif;
 }
+
 .pricing-box {
   margin-left: 32px;
   padding: 20px 10px;
@@ -1655,6 +1656,30 @@ color: #1374F6;
 .mt-120px{
   margin-top: 120px;
 }
+/* finish-setup */
+.finish-setup-gifs{
+  margin-left:2%;
+  min-width:70vw;
+  margin-top:1.5% ;
+}
+/* register */
+.ml--17rem{
+  margin: 0.4rem 0 0.4rem -17rem;
+} 
+.onboarding-heading{
+  font-size: 36px;
+}
+/* about-yourself */
+#phoneNumber{
+  margin-left:40px
+}
+/* pricing */
+.mt-18px{
+  margin-top: 18px;
+}
+.mt-28px{
+  margin-top: 28px;
+  }
 @media only screen and (max-width: 479px) {
   /* homepage */
   .headingSize,.headingSize3{
@@ -1672,6 +1697,50 @@ color: #1374F6;
   /* footer */
   .container {
     margin-bottom: -20vh;
+}
+/* register,company */
+.onboarding-heading{
+  font-size: 24px;
+  margin-left:50px ;
+}
+/* end of register,company */
+
+/* about-yourself */
+#phoneNumber{
+  margin-left:40px;
+  width: 210px;
+
+}
+/* pricing-page */
+.pricing-button {
+  font-size: 15px;
+  padding: 4px 12px 4px 12px;
+}
+
+.onDemandCategories2{
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.pricing-box .card-title {
+  font-size: 36px;
+  padding-left: 40px;
+}
+.moreFeatures{
+  font-size: 18px;
+  margin-left: 190px;
+}
+.price-duration{
+  font-size: 16px;
+}
+.pricing-box {
+  margin-left: 0px;
+}
+.mt-18px{
+  margin-top: -142px;
+  margin-left: 40px;
+}
+.mt-28px{
+margin-top: -83px;
 }
 .ml-15{
   margin-left: 0px;
@@ -1719,5 +1788,10 @@ font-size: 16px;
 /* video-banner */
 .mt-120px{
   margin-top: 0px;
+}
+/* finish-setup */
+.finish-setup-gifs{
+  max-width: 97vw;
+  margin-left: 1%;
 }
 }
