@@ -276,6 +276,7 @@ padding-bottom: 36px;
 }
 @media (max-width: 479px) {
   width: 80.5%;
+  margin-left: 16px;
 }
 
 `;

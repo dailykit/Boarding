@@ -106,9 +106,9 @@ export default function Company() {
           </Button>
         </div>
         {/* end of next button */}
-            <section className="mb-2 mx-auto w-1/4" style={{ "height": "27rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
+            <section className="mb-2 mx-auto w-1/4 ml--30px" style={{ "height": "27rem",display: "flex", justifyContent: "center", flexDirection: "column" }}>
               <Form style={{ fontWeight: "bold"}}>
-                <h2 className="nunito onboarding-heading" style={{marginTop:"-38px",fontWeight:"bold"}}>Enter Company Details</h2>
+                <h2 className="nunito onboardingheading3" style={{marginTop:"-38px",fontWeight:"bold"}}>Enter Company Details</h2>
                 <Field>
                   <Label htmlFor="company">Company Name</Label>
                   <Input
