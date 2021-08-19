@@ -141,6 +141,7 @@ font-family: "Nunito", sans-serif;
       }
    }
    @media (max-width: 479px) {
+      margin-left:16px;
       input,select{
          width: 308px;
       }
