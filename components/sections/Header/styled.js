@@ -62,8 +62,6 @@ export const Styles = {
     }
   `,
   ghostButton:styled.button`
-    background: #111b2b;
-    color: white;
     font-family: 'Work Sans', sans-serif;
     border: 2px solid #FFFFFF;
     border-radius: 16px;

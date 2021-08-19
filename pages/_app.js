@@ -28,14 +28,16 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-146874242-1"
+        ></script>
+        {/* calendly form */}
+        <script
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
           async
         ></script>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-146874242-1"
-        ></script>
+      
         {/* meta tags */}
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter" content="dailykitorg" key="twhandle" /> */}
