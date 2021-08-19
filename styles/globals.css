@@ -1486,7 +1486,7 @@ border-radius: 12px;
 .navbar-brand{
   margin-left:1.5rem;
 }
-#exampleModal{
+#exampleModal-1{
   display: none;
 }
 .mb-12px{
@@ -1868,7 +1868,7 @@ font-size: 16px;
 .mb-12px{
   margin-bottom: 2px;
 }
-#exampleModal{
+#exampleModal-1{
   display: inline-block;
 }
 .complete-signup-button,.responsive-login-button{
