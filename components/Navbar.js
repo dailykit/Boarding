@@ -3,21 +3,22 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useAuth } from "../store/auth";
 import { Styles} from "../components/sections/Header/styled";
-
+import CompleteSignup from "./subcomponents/shared/CompleteSignup";
 export const Navbar = () => {
   const location = useRouter();
   const { user, authenticated, logout } = useAuth();
   return (
     <nav
-      className="navbar fixed-top navbar-expand-lg navbar-light"
+      className="navbar fixed-top navbar-expand-lg navbar-dark"
       style={{
         border: "0px solid black",
         boxShadow: "0px 5px 20px rgba(255, 255, 255, 0.1)",
         backgroundColor: "#111B2B"
       }}
     >
-      <div className="container-fluid mt-2 mb-2">
-        <a className="navbar-brand" href="/" style={{ marginLeft: "1.5rem" }}>
+      <div className="container-fluid pl-0 mt-12px mb-12px">
+        <div className="navbar-icon">
+        <a className="navbar-brand" href="/">
           <Image
             src="/assets/images/Logo.png"
             alt="logo-img"
@@ -25,30 +26,25 @@ export const Navbar = () => {
             height="54"
           />
         </a>
-        <button
-          className="navbar-toggler navbar-dark"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav special-styling me-auto mb-2 mb-lg-0">
+        </div>
         {!location.pathname.includes("onboard") ? (
-       
             <>
              {/* *******authenticated and not in onboard pages so 1signup/login 2)complete your signup 3)Logout */}
-              <li className="nav-item">
+              <li>
                 {authenticated ? (<>
                   {user?.organization?.onboardStatus != "FINISH_SETUP" ? (
-                  <button type="button" className="nav-link btn-style-fourteen mt-4"
-                  onClick={()=>location.push('/onboard/signup/company')}>
-                  Complete your Signup
-                 </button>) : (
+                  <>
+                  {/* for mobile */}
+                  <a type="button" id="exampleModal" className="btn-style-thirteen" data-bs-toggle="modal" data-bs-target="#exampleModal" href="/">
+                  <span className="navbar-toggler-icon light"></span> 
+                  </a>
+                <CompleteSignup/>
+                {/* for desktop */}
+                <Styles.ghostButton className="nav-link complete-signup-button" style={{backgroundColor:"white",color:"black",marginRight:"1rem",
+                      paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}} onClick={() => location.push('/onboard/signup/company')}>
+                       Complete your Signup
+                </Styles.ghostButton >
+                </>) : (
                  <Styles.ghostButton 
                       className="nav-link"
                       style={{backgroundColor:"white",color:"black",display:"inline",marginRight:"1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
@@ -57,14 +53,14 @@ export const Navbar = () => {
                       LOGOUT
                     </Styles.ghostButton>)
                   }</>) : (<>
-                  <Styles.ghostButton style={{backgroundColor:"white",color:"black",display:"inline",marginRight:"1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
-                    className="nav-link"
+                  <Styles.ghostButton style={{display:"inline",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
+                    className="nav-link responsive-signup-button"
                     onClick={() => location.push("/onboard/signup")}
                   >
                     SIGNUP
                   </Styles.ghostButton>
-                  <Styles.ghostButton style={{color:"white",display:"inline",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
-                  className="nav-link"
+                  <Styles.ghostButton style={{color:"white",background:"#111b2b",paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}}
+                  className="nav-link responsive-login-button"
                   onClick={() => location.push("/onboard/login")}
                 >
                   LOGIN
@@ -87,15 +83,15 @@ export const Navbar = () => {
               {/* if not authenticated and ONBOARD PAGES then 2 condtion 1)login or 2) signup */}
               {!authenticated ? (
 
-                <li className="nav-item">
+                <li className="onboarding-login">
                   <section className="username">
                   {!location.pathname.includes("login") ? (
-                        <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nav-link nunito"
+                        <Styles.ghostButton style={{color:"white",background:"#111b2b",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px"}} className="nav-link nunito res-onboard-login"
                          onClick={() => location.push("/onboard/login")}>
                             LOG IN
                             </Styles.ghostButton>
                   ) : (
-                    <Styles.ghostButton style={{color:"white",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px",marginLeft:"24rem"}} className="nav-link nunito" 
+                    <Styles.ghostButton style={{color:"white",background:"#111b2b",display:"inline",padding:"0.6rem 1.3rem 0.6rem 1.3rem",fontSize:"17px"}} className="nav-link nunito res-onboard-login" 
                          onClick={() => location.push("/onboard/signup")}>
                            SIGN UP
                             </Styles.ghostButton>)}
@@ -103,9 +99,9 @@ export const Navbar = () => {
                 </li>
               ) : (
 
-                // {/* // if authenticated then 2 condtion 1)logout or 2)go to dasboard */}
-                <li className="nav-item">
-                  <section className="username" style={{marginLeft: "55rem"}}>
+                // {/* // if authenticated then 2 condition 1)logout or 2)go to dasboard */}
+                <li>
+                  <section className="username">
                     <span
                       title={user?.name} style={{ fontSize: "18px" }} className="nunito text-sm text-white cursor-default">
                       Hello, {user?.firstName} &nbsp;
@@ -115,10 +111,9 @@ export const Navbar = () => {
                       <Styles.ghostButton style={{color:"white",display:"inline", marginLeft: "0.5rem",paddingRight:"0.6rem",paddingLeft:"0.6rem",fontSize:"17px"}}
                         className="nunito"
                         onClick={() => location.push("/")}
-                      >
-                        Go to dashboard
+                      >Go to dashboard
                       </Styles.ghostButton>
-                    ) : (<Styles.ghostButton className="nunito" style={{color:"white",display:"inline",marginLeft: "1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",paddingTop:"6px",fontSize:"17px"}} onClick={logout}>
+                    ) : (<Styles.ghostButton className="nunito" style={{color:"white",background:"#111b2b",display:"inline",marginLeft: "1rem",paddingRight:"1.3rem",paddingLeft:"1.3rem",paddingTop:"6px",fontSize:"17px"}} onClick={logout}>
                       LOG OUT
                     </Styles.ghostButton>)}
 
@@ -130,8 +125,7 @@ export const Navbar = () => {
             </>
          
         )}
-        </ul>
-       </div>
+    
       </div>
     </nav>
   );

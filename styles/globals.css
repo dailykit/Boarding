@@ -1483,6 +1483,15 @@ border-radius: 12px;
 .username-2{
   margin-left: 55rem;
 }
+.navbar-brand{
+  margin-left:1.5rem;
+}
+#exampleModal{
+  display: none;
+}
+.mb-12px{
+  margin-bottom: 12px;
+}
 @media only screen and (max-width: 479px) {
   .finishSetupSection{
     width: 18rem;
@@ -1512,10 +1521,14 @@ border-radius: 12px;
     border: none;
   }
   .username{
-    margin-left: 1rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+  }
+  .username> span{
+    display:none;
   }
   .username-2{
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
 }
 .offer {
@@ -1686,6 +1699,33 @@ color: #1374F6;
 .mt-28px{
   margin-top: 28px;
   }
+  /* container-fluid mt and mb as 12px (in mobile view mb-0) */
+  .mt-12px{
+    margin-top: 12px;
+  }
+  .mb-12px{
+    margin-bottom: 12px;
+  }
+  .complete-signup-button,.responsive-login-button{
+    display:inline;
+  }
+  .res-onboard-login{
+    margin-left:24rem;
+  }
+  .responsive-signup-button {
+    margin-right: 1rem;
+    background-color:#fff;
+    color:#111b2b;
+}
+.nav-link:focus, .nav-link:hover {
+ text-decoration: none;
+}
+.nav-link:hover {
+opacity:0.8;
+}
+.onboarding-login{
+  margin-top: -12px;
+}
 @media only screen and (max-width: 479px) {
   /* homepage */
   .headingSize,.headingSize3{
@@ -1707,13 +1747,19 @@ color: #1374F6;
 /* register,company */
 .onboarding-heading{
   font-size: 24px;
-  margin-left:50px ;
+  text-align: center;
+  margin-left: -66px;
 }
 .onboarding-heading2{
   font-size: 26px;
   margin-left:10px;
 }
-/* end of register,company */
+.ml--30px> form{
+  margin-left: -30px;
+}
+.ml--17rem{
+  margin: 0.4rem 0 0.4rem -15rem;
+}
 /* card-details page */
 .pl-0{
   padding-left: 0;
@@ -1727,6 +1773,7 @@ color: #1374F6;
 /* finish-setup */
 .onboardingheading3{
   font-size: 26px;
+  margin-left: 15px;
 }
 /* pricing-page */
 .pricing-button {
@@ -1810,5 +1857,33 @@ font-size: 16px;
 .finish-setup-gifs{
   max-width: 97vw;
   margin-left: 1%;
+}
+/* navbar-icon */
+.navbar-icon{
+  width:181px;
+}
+.pl-0{
+  padding-left: 0px;
+}
+.mb-12px{
+  margin-bottom: 2px;
+}
+#exampleModal{
+  display: inline-block;
+}
+.complete-signup-button,.responsive-login-button{
+  display:none;
+}
+.responsive-signup-button {
+  margin-right: 3px;
+  background-color:black;
+  color:white;
+}
+.res-onboard-login{
+  margin-left:0rem;
+  margin-bottom:6px;
+}
+.onboarding-login{
+  margin-top: 0px;
 }
 }
