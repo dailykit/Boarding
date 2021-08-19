@@ -40,7 +40,7 @@ export default function Login() {
         password: form.password,
       });
       if (user?.sub) {
-        router.push('/onboard/signup')
+        router.push('/onboard/signup/company')
       }
     } catch (error) {
       if (error?.code === 401) {
