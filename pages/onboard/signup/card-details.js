@@ -196,7 +196,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
                         value={name}
                         ref={inputRef}
                         placeholder="Enter Card Holder's name"
-                        onChange={e => setName(e.target.value.trim())}
+                        onChange={e => setName(e.target.value)}
                         className="input mt-2"
                      />
                   </section>
