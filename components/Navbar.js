@@ -107,7 +107,7 @@ export const Navbar = () => {
                       {user?.lastName}
                     </span>
                     {user?.organization.onboardStatus == "FINISH_SETUP" ? (
-                      <Styles.ghostButton style={{color:"white",display:"inline", marginLeft: "0.5rem",paddingRight:"0.6rem",paddingLeft:"0.6rem",fontSize:"17px"}}
+                      <Styles.ghostButton style={{background:"black",color:"white",display:"inline", marginLeft: "0.5rem",paddingRight:"0.6rem",paddingLeft:"0.6rem",fontSize:"17px"}}
                         className="nunito"
                         onClick={() => location.push("/")}
                       >Go to dashboard
