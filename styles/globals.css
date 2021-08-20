@@ -1765,7 +1765,7 @@ opacity:0.8;
 }
 /* card-details page */
 .pl-0{
-  padding-left: 0;
+  padding-left:8px;
 }
 /* about-yourself */
 #phoneNumber{
