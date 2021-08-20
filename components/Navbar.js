@@ -34,7 +34,7 @@ export const Navbar = () => {
                   {user?.organization?.onboardStatus != "FINISH_SETUP" ? (
                   <>
                   {/* for mobile */}
-                  <a type="button" id="exampleModal-1" className="btn-style-thirteen" data-bs-toggle="modal" data-bs-target="#exampleModal" href="/">
+                  <a type="button" id="exampleModal-1" style={{marginRight:"-20px"}} className="btn-style-thirteen" data-bs-toggle="modal" data-bs-target="#exampleModal" href="/">
                   <span className="navbar-toggler-icon light"></span> 
                   </a>
                 <CompleteSignup/>
@@ -157,8 +157,8 @@ export const Navbar = () => {
               <div class="container-fluid">
                 <div class="row justify-content-center">
                   <div class="col-md-6 ml-auto">
-                    <Image width="300px"
-                    height="300px"
+                    <Image width="250px"
+                    height="250px"
                     src='/assets/images/LoginPage.png'
                     alt="login-page" /></div>
                 </div>
@@ -169,7 +169,7 @@ export const Navbar = () => {
               <Styles.ghostButton style={{
                 background: "#111b2b",
                 color: "white", display: "inline", paddingRight: "1.3rem", paddingLeft: "1.3rem", paddingTop: "10px",
-                paddingBottom: "10px", fontSize: "17px", marginRight: "40px"
+                paddingBottom: "10px", fontSize: "17px", marginRight: "28px"
               }}
                 className="nav-link"
                 onClick={() => location.push('/onboard/signup/company')}>Complete your Signup</Styles.ghostButton >

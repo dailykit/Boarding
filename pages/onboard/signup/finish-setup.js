@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useMutation,useLazyQuery } from "@apollo/client";
-import { Gif } from "@giphy/react-components";
-import { GiphyFetch } from "@giphy/js-fetch-api";
+// import { Gif } from "@giphy/react-components";
+// import { GiphyFetch } from "@giphy/js-fetch-api";
 import Image from 'next/image';
 import Layout  from "../../../components/Layout";
 import {Main } from "../../../components/styled";
@@ -12,62 +12,62 @@ import VerifyEmailBanner from "../../../components/VerifyEmailBanner";
 import { UPDATE_ORGANIZATION } from "../../../graphql";
 import Footer from "../../../components/Footer";
 import Confetti from 'react-dom-confetti';
-const gif_ids = {
-  launch: [
-    "tXLpxypfSXvUc",
-    "cEYFeE4wJ6jdDVBiiIM",
-    "NRWFU8lq7hCXS",
-    "kjjRGpezebjaw",
-    "26DMXCypYxHVNydMc",
-    "3oEhn501TH1S2NZATS",
-    "dVnzGW7UehcEpwLxBm",
-  ],
-  popcorn: [
-    "hVTouq08miyVo1a21m",
-    "NipFetnQOuKhW",
-    "tyqcJoNjNv0Fq",
-    "11vsrRFqhjOcKI",
-    "nWg4h2IK6jYRO",
-    "uWzS6ZLs0AaVOJlgRd",
-    "Bzebpz5rnyBb2",
-  ],
-  loading: [
-    "l3nWhI38IWDofyDrW",
-    "RgzryV9nRCMHPVVXPV",
-    "3y0oCOkdKKRi0",
-    "RHEqKwRZDwFKE",
-    "wnYB3vx9t6PXiq1ubB",
-    "3ohs7TrCSp7c8ZrxBe",
-    "NGOoVtuqkfl0A",
-  ],
-  cooking: [
-    "CNocEFcF9IBegtgW3q",
-    "N23cG6apipMmQ",
-    "3oEjHC7al4GfnudR7y",
-    "xTk9ZAbN1rHWoMiANy",
-    "5hrj42zCA1RoA",
-    "H1NDopejHQjB5CQ8Yf",
-    "rkgX9MTBXJa1O",
-  ],
-  excitement: [
-    "q4sdF9tchap6E",
-    "5GoVLqeAOo6PK",
-    "nSkIv4g54tFni",
-    "l3vR1AaADYcE7C8vu",
-    "nnFwGHgE4Mk5W",
-    "3o85xozRUKxoFSxODe",
-    "WUq1cg9K7uzHa",
-  ],
-  congrats: [
-    "g9582DNuQppxC",
-    "5nmNO4kFHvgqF1wnPg",
-    "l2Sqir5ZxfoS27EvS",
-    "l2YWCPLrCIaNc9QT6",
-    "mPIA4KZVXv0ty",
-    "bKBM7H63PIykM",
-    "l0MYCn3DDRBBqk6nS",
-  ],
-};
+// const gif_ids = {
+//   launch: [
+//     "tXLpxypfSXvUc",
+//     "cEYFeE4wJ6jdDVBiiIM",
+//     "NRWFU8lq7hCXS",
+//     "kjjRGpezebjaw",
+//     "26DMXCypYxHVNydMc",
+//     "3oEhn501TH1S2NZATS",
+//     "dVnzGW7UehcEpwLxBm",
+//   ],
+//   popcorn: [
+//     "hVTouq08miyVo1a21m",
+//     "NipFetnQOuKhW",
+//     "tyqcJoNjNv0Fq",
+//     "11vsrRFqhjOcKI",
+//     "nWg4h2IK6jYRO",
+//     "uWzS6ZLs0AaVOJlgRd",
+//     "Bzebpz5rnyBb2",
+//   ],
+//   loading: [
+//     "l3nWhI38IWDofyDrW",
+//     "RgzryV9nRCMHPVVXPV",
+//     "3y0oCOkdKKRi0",
+//     "RHEqKwRZDwFKE",
+//     "wnYB3vx9t6PXiq1ubB",
+//     "3ohs7TrCSp7c8ZrxBe",
+//     "NGOoVtuqkfl0A",
+//   ],
+//   cooking: [
+//     "CNocEFcF9IBegtgW3q",
+//     "N23cG6apipMmQ",
+//     "3oEjHC7al4GfnudR7y",
+//     "xTk9ZAbN1rHWoMiANy",
+//     "5hrj42zCA1RoA",
+//     "H1NDopejHQjB5CQ8Yf",
+//     "rkgX9MTBXJa1O",
+//   ],
+//   excitement: [
+//     "q4sdF9tchap6E",
+//     "5GoVLqeAOo6PK",
+//     "nSkIv4g54tFni",
+//     "l3vR1AaADYcE7C8vu",
+//     "nnFwGHgE4Mk5W",
+//     "3o85xozRUKxoFSxODe",
+//     "WUq1cg9K7uzHa",
+//   ],
+//   congrats: [
+//     "g9582DNuQppxC",
+//     "5nmNO4kFHvgqF1wnPg",
+//     "l2Sqir5ZxfoS27EvS",
+//     "l2YWCPLrCIaNc9QT6",
+//     "mPIA4KZVXv0ty",
+//     "bKBM7H63PIykM",
+//     "l0MYCn3DDRBBqk6nS",
+//   ],
+// };
 
 export default function FinishSetup() {
   const { user } = useAuth();
@@ -195,44 +195,44 @@ const Installation = () => {
     </div>
   );
 };
-const giphy = new GiphyFetch(process.env.NEXT_PUBLIC_GIPHY_KEY);
-const sleep = (ms) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
+// const giphy = new GiphyFetch(process.env.NEXT_PUBLIC_GIPHY_KEY);
+// const sleep = (ms) => {
+//   return new Promise((resolve) => setTimeout(resolve, ms));
+// };
 
 const GifCycle = () => {
   const { user } = useAuth();
-  const [gifs, setGifs] = React.useState([]);
+  // const [gifs, setGifs] = React.useState([]);
 
-  const get = async (id) => await (await giphy.gif(id)).data;
+  // const get = async (id) => await (await giphy.gif(id)).data;
 
-  React.useEffect(() => {
-    (async () => {
-      // launch
-      const launchGifs = await Promise.all(gif_ids.launch.map(get));
-      setGifs(launchGifs);
-      await sleep(240000);
-      // popcorn
-      const popcornGifs = await Promise.all(gif_ids.popcorn.map(get));
-      setGifs(popcornGifs);
-      await sleep(240000);
-      // loading
-      const loadingGifs = await Promise.all(gif_ids.loading.map(get));
-      setGifs(loadingGifs);
-      await sleep(240000);
-      // cooking
-      const cookingGifs = await Promise.all(gif_ids.cooking.map(get));
-      setGifs(cookingGifs);
-      await sleep(240000);
-      // excitement
-      const excitementGifs = await Promise.all(gif_ids.excitement.map(get));
-      setGifs(excitementGifs);
-      await sleep(240000);
-      // congrats
-      const congratsGifs = await Promise.all(gif_ids.congrats.map(get));
-      setGifs(congratsGifs);
-    })();
-  }, []);
+  // React.useEffect(() => {
+  //   (async () => {
+  //     // launch
+  //     const launchGifs = await Promise.all(gif_ids.launch.map(get));
+  //     setGifs(launchGifs);
+  //     await sleep(240000);
+  //     // popcorn
+  //     const popcornGifs = await Promise.all(gif_ids.popcorn.map(get));
+  //     setGifs(popcornGifs);
+  //     await sleep(240000);
+  //     // loading
+  //     const loadingGifs = await Promise.all(gif_ids.loading.map(get));
+  //     setGifs(loadingGifs);
+  //     await sleep(240000);
+  //     // cooking
+  //     const cookingGifs = await Promise.all(gif_ids.cooking.map(get));
+  //     setGifs(cookingGifs);
+  //     await sleep(240000);
+  //     // excitement
+  //     const excitementGifs = await Promise.all(gif_ids.excitement.map(get));
+  //     setGifs(excitementGifs);
+  //     await sleep(240000);
+  //     // congrats
+  //     const congratsGifs = await Promise.all(gif_ids.congrats.map(get));
+  //     setGifs(congratsGifs);
+  //   })();
+  // }, []);
   return (
     <div className="relative">
       {user.organization?.instanceStatus === "SETUP_COMPLETED" ? (
@@ -262,39 +262,45 @@ const GifCycle = () => {
           </Para>
         </header>
       )}
-      <section className="finish-setup-gifs">{gifs.length > 0 && <RenderGif gifs={gifs} />}</section>
+      <section className="finish-setup-gifs">
+        <Image src="/assets/images/gif-maker.gif"
+        width="720px"
+        height="500px"
+        />
+        {/* {gifs.length > 0 && <RenderGif gifs={gifs} />} */}
+        </section>
     </div>
   );
 };
 
-const RenderGif = ({ gifs }) => {
-  const { user } = useAuth();
-  const [gif, setGif] = React.useState(null);
-  React.useEffect(() => {
-    (async () => {
-      setGif(gifs[0]);
-      await sleep(34286);
-      setGif(gifs[1]);
-      await sleep(34286);
-      setGif(gifs[2]);
-      await sleep(34286);
-      setGif(gifs[3]);
-      await sleep(34286);
-      setGif(gifs[4]);
-      await sleep(34286);
-      setGif(gifs[5]);
-      await sleep(34286);
-      setGif(gifs[6]);
-    })();
-  }, [gifs]);
-  return (
-    gif && (
-      <Gif
-        gif={gif} height="500px"
-      />
-    )
-  );
-};
+// const RenderGif = ({ gifs }) => {
+//   const { user } = useAuth();
+//   const [gif, setGif] = React.useState(null);
+//   React.useEffect(() => {
+//     (async () => {
+//       setGif(gifs[0]);
+//       await sleep(34286);
+//       setGif(gifs[1]);
+//       await sleep(34286);
+//       setGif(gifs[2]);
+//       await sleep(34286);
+//       setGif(gifs[3]);
+//       await sleep(34286);
+//       setGif(gifs[4]);
+//       await sleep(34286);
+//       setGif(gifs[5]);
+//       await sleep(34286);
+//       setGif(gifs[6]);
+//     })();
+//   }, [gifs]);
+//   return (
+//     gif && (
+//       <Gif
+//         gif={gif} height="500px"
+//       />
+//     )
+//   );
+// };
 
 const Error=styled.span`
 justify-self: start;

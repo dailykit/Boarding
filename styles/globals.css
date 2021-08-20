@@ -1670,11 +1670,11 @@ color: #1374F6;
   margin-top: 120px;
 }
 /* finish-setup */
-.finish-setup-gifs{
-  margin-left:2%;
-  min-width:70vw;
-  margin-top:1.5% ;
-}
+/* .finish-setup-gifs{
+  /* margin-left:2%; */
+  /* min-width:70vw;
+  margin-top:1.5% ; */
+/* } */ 
 .onboardingheading3{
   font-size: 34px;
 }
@@ -1725,6 +1725,9 @@ opacity:0.8;
 }
 .onboarding-login{
   margin-top: -12px;
+}
+.nav-link{
+  text-decoration: none;
 }
 @media only screen and (max-width: 479px) {
   /* homepage */
@@ -1853,11 +1856,11 @@ font-size: 16px;
 .mt-120px{
   margin-top: 0px;
 }
-/* finish-setup */
+/* finish-setup
 .finish-setup-gifs{
   max-width: 97vw;
   margin-left: 1%;
-}
+} */
 /* navbar-icon */
 .navbar-icon{
   width:181px;
@@ -1889,4 +1892,7 @@ font-size: 16px;
 .modal-backdrop{
   display:none;
 }
+.modal-content {
+  width: 90%;
+  margin-left: 18px;}
 }

@@ -62,12 +62,6 @@ export const Layout = ({ children, hideSteps }) => {
                   <Styles.Step className={isStepActive(5)}>
                      <span>Card Details</span>
                   </Styles.Step>
-                  {/* <Styles.Step className={isStepActive(6)}>
-                     <span>Onboarding Support</span>
-                  </Styles.Step> */}
-                  {/* <Styles.Step className={isStepActive(7)}>
-                     <span>Import</span>
-                  </Styles.Step> */}
                   <Styles.Step className={isStepActive(6)}>
                      <span>Finish Setup</span>
                   </Styles.Step>

@@ -120,6 +120,7 @@ const Panel = styled.section`
   margin-top: 10rem;
   @media (max-width: 479px) {
     width: 230px;
+    margin-left: 31px;
   }`;
 
 const FieldSet = styled.fieldset`
