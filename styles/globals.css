@@ -1886,4 +1886,7 @@ font-size: 16px;
 .onboarding-login{
   margin-top: 0px;
 }
+.modal-backdrop{
+  display:none;
+}
 }

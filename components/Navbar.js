@@ -39,7 +39,7 @@ export const Navbar = () => {
                   </a>
                 <CompleteSignup/>
                 {/* for desktop */}
-                <Styles.ghostButton className="nav-link complete-signup-button" style={{backgroundColor:"white",color:"black",marginRight:"1rem",
+                <Styles.ghostButton className="nav-link complete-signup-button" style={{color:"white",background:"black",marginRight:"1rem",
                       paddingRight:"1.3rem",paddingLeft:"1.3rem",fontSize:"17px"}} onClick={() => location.push('/onboard/signup/company')}>
                        Complete your Signup
                 </Styles.ghostButton >
