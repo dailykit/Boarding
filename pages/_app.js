@@ -27,10 +27,8 @@ function MyApp({ Component, pageProps }) {
         />
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-146874242-1"
-        ></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206516548-1"></script>
+        
         {/* calendly form */}
         <script
           type="text/javascript"
