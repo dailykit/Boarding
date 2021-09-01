@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import Navbar from './Navbar';
 import { useAuth } from '../store/auth'
 
-export const Layout = ({ children, hideSteps }) => {
+export const Layout = ({ children, hidesteps }) => {
    const { user, onboard } = useAuth()
    const evalHeightFirst = step => {
       if (step === 1) {
@@ -31,9 +31,9 @@ export const Layout = ({ children, hideSteps }) => {
    }
 
    return (
-      <Styles.Wrapper step={onboard.step} hideSteps={hideSteps} className="wrapper">
+      <Styles.Wrapper step={onboard.step} hidesteps={hidesteps} className="wrapper">
          <Navbar/>
-         <Styles.Aside hideSteps={hideSteps} className="progressBar">
+         <Styles.Aside hidesteps={hidesteps} className="progressBar">
             <Styles.Stage height1={evalHeightFirst(onboard.step)}>
                Basic Information
                <>
@@ -87,23 +87,26 @@ const Styles = {
          overflow:visible;
          width:360px;
        }
-      ${({ hideSteps }) =>
-         hideSteps
+       ${({ hidesteps }) =>
+       console.log(hidesteps)}
+      ${({ hidesteps }) =>
+         hidesteps
             ? css`
-                 grid-template-columns: 1fr;
+                 grid-template-columns: 100%;
                  grid-template-rows: 60px 1fr 16px;
                  grid-template-areas: 'head' 'main';
               `
             : css`
                  grid-template-rows: ${({ step }) =>
                     step === 6 ? '60px 1fr 16px' : '60px 1fr 100px'};
-                 grid-template-columns: 320px 1fr;
+                  grid-template-columns:320px 1fr;
                  grid-template-areas: ${({ step }) =>
                     step === 6
                        ? `'head head' 'aside main'`
                        : `'head head' 'aside main' 'aside footer'`};
               `}
    `,
+   
    Aside: styled.aside`
       grid-area: aside;
       flex-direction: column;
@@ -111,9 +114,9 @@ const Styles = {
       color: #fff;
       padding-left:52px;
       background-color:#111b2b;
-      display: ${({ hideSteps }) => {(hideSteps ? 'none' : 'flex')}};
+      display: ${({ hidesteps }) => {(hidesteps ? 'none' : 'flex')}};
       @media (max-width: 479px) {
-         display: inline-block;
+         display: ${({ hidesteps }) => {(hidesteps ? 'none' : 'inline-block')}};
          grid-area: footer;
          padding-left:1.6rem;
          padding-top:7rem;
