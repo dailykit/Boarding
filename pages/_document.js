@@ -17,6 +17,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <script defer src="/analytics.js" />
+          <script defer src="/facebook.js" />
           <script defer src="/googleTagManager.js" />
         </body>
       </Html>

@@ -28,7 +28,9 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206516548-1"></script>
-        
+        {/* facebook pixel */}
+        <noscript><img src="https://www.facebook.com/tr?id=341238817743831&ev=PageView&noscript=1" height="1" width="1" style={{"display":"none"}}
+/></noscript>
         {/* calendly form */}
         <script
           type="text/javascript"
