@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const AuthContext = React.createContext();
 
-import * as utils from "../../utils";
+import * as utils from "../utils";
 import { USER } from "../../graphql";
 import { Loader } from "../../components";
 
