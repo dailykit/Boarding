@@ -1,4 +1,10 @@
+
 module.exports = {
+  images: {
+    domains: [
+      "s3.us-east-2.amazonaws.com"
+    ],
+  },
   env: {
     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: 'pk_test_tOKq1xJmx07XTTAKLfntMh7f00ltRB823g',
     STRIPE_SECRET_KEY: 'sk_test_RB8uGKJPnAwJ0qyXdWt9isYX0009D7atDc',
