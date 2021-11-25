@@ -19,7 +19,7 @@ export const Navbar = () => {
         <div className="navbar-icon">
           <a className="navbar-brand" href="/">
             <Image
-              src="/../assets/images/Logo.png"
+              src="https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Logo.png"
               alt="logo-img"
               width="221"
               height="54"
@@ -161,7 +161,7 @@ const CompleteSignup = () => {
                   <div class="col-md-6 ml-auto">
                     <Image width="250px"
                       height="250px"
-                      src='/assets/images/LoginPage.png'
+                      src='https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/LoginPage.png'
                       alt="login-page" /></div>
                 </div>
               </div>

@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:site_name" content="Dailykit" key="ogsitename" />
         <meta
           property="og:image"
-          content="/../assets/images/Logo.png"
+          content="https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Logo.png"
           key="ogimage"
         />
         <link rel="icon" href="/Dailykit Icon.png" />

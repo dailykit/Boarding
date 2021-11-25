@@ -18,7 +18,7 @@
 //     <div className="container-fluid mt-2 mb-2" style={{display:"flex","justifyContent":"space-between"}}>
 //       <a className="navbar-brand" onClick={() => location.push("/")} style={{ marginLeft: "1.5rem" }}>
 //         <Image
-//           src="/../assets/images/Logo.png"
+//           src="https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Logo.png"
 //           alt=""
 //           width="181"
 //           height="54"

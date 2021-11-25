@@ -189,7 +189,7 @@ export default function Signup() {
               <div className="col-md-5 col-xs-10" style={{ "marginTop": "100px" }}>
                 <Image width="300px"
                   height="300px"
-                  src='/assets/images/LoginPage.png'
+                  src='https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/LoginPage.png'
                   alt="login-page" />
               </div>
             </div></div>

@@ -23,7 +23,7 @@ export default function Login() {
       [name]: value,
     }));
   };
-  
+
 
   // React.useEffect(() => {
   //   if (authenticated) {
@@ -50,61 +50,61 @@ export default function Login() {
   };
   return (
     <>
-    <Layout_2>
-    <div className="container">
+      <Layout_2>
+        <div className="container">
           <div className="row">
             <div className="col-md-7 col-md-offset-3">
-      <Panel>
-      <h2 style={{alignItems:"left",marginTop:"20px",marginBottom:"20px",fontWeight:"bold",fontSize:"36px",fontFamily: '"Nunito",sans-serif'}}>Login</h2>
-        <FieldSet>
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={onChange}
-            placeholder="Enter your email"
-          />
-        </FieldSet>
-        <FieldSet>
-          <Label htmlFor="password">Password</Label>
-          <Input
-            name="password"
-            type="password"
-            onChange={onChange}
-            value={form.password}
-            placeholder="Enter your password"
-          />
-        </FieldSet>
-       
-        <Submit
-          className={!isValid ? "disabled" : ""}
-          onClick={() => isValid && submit()}
-          disabled={!form.email || !form.password}
-        >
-          SUBMIT
-        </Submit>
-     
-         
-        <button className="bold" style={{margin:"0.4rem 0 1.4rem -2.4rem",fontWeight:"600" }}>
-        <span style={{color:"#111B2B"}}> Not registered yet? </span>   <Link href="/onboard/signup"> Register instead?   </Link>
-          </button>
-     
-        {error && <Error>{error}</Error>}
-      </Panel>
-      </div>
-        <div className="col-md-5 col-md-offset-3" style={{"marginTop":"200px"}}>
-        <Image width="360px"
-         height="350px"
-          src='/assets/images/Login.png'
-          alt="login"/>
-          </div>
-        </div></div>
-      <div style={{marginBottom:"4rem"}}></div>
+              <Panel>
+                <h2 style={{ alignItems: "left", marginTop: "20px", marginBottom: "20px", fontWeight: "bold", fontSize: "36px", fontFamily: '"Nunito",sans-serif' }}>Login</h2>
+                <FieldSet>
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={onChange}
+                    placeholder="Enter your email"
+                  />
+                </FieldSet>
+                <FieldSet>
+                  <Label htmlFor="password">Password</Label>
+                  <Input
+                    name="password"
+                    type="password"
+                    onChange={onChange}
+                    value={form.password}
+                    placeholder="Enter your password"
+                  />
+                </FieldSet>
+
+                <Submit
+                  className={!isValid ? "disabled" : ""}
+                  onClick={() => isValid && submit()}
+                  disabled={!form.email || !form.password}
+                >
+                  SUBMIT
+                </Submit>
+
+
+                <button className="bold" style={{ margin: "0.4rem 0 1.4rem -2.4rem", fontWeight: "600" }}>
+                  <span style={{ color: "#111B2B" }}> Not registered yet? </span>   <Link href="/onboard/signup"> Register instead?   </Link>
+                </button>
+
+                {error && <Error>{error}</Error>}
+              </Panel>
+            </div>
+            <div className="col-md-5 col-md-offset-3" style={{ "marginTop": "200px" }}>
+              <Image width="360px"
+                height="350px"
+                src='https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Login.png'
+                alt="login" />
+            </div>
+          </div></div>
+        <div style={{ marginBottom: "4rem" }}></div>
       </Layout_2>
-      <div style={{marginTop:"14rem"}}></div>
-      <Footer/>
-      </>
+      <div style={{ marginTop: "14rem" }}></div>
+      <Footer />
+    </>
   );
 }
 

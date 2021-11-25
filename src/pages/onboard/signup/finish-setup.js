@@ -137,7 +137,7 @@ const Installation = () => {
           <div className="col-md-5 col-md-offset-3" style={{ "marginTop": "20px" }}>
             <Image width="320px"
               height="270px"
-              src='/assets/images/FinishSetup.png'
+              src='https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/FinishSetup.png'
               alt="login-page" />
           </div>
         </div></div>
@@ -178,7 +178,7 @@ const GifCycle = () => {
         </header>
       )}
       <section className="finish-setup-gifs">
-        <Image src="/../assets/images/gif-maker.gif"
+        <Image src="https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/gif-maker.gif"
           width="720px"
           height="500px"
         />

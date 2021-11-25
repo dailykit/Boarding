@@ -15,7 +15,10 @@ export const CompleteSignup = () => {
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-dialog-centered mt-4" style={{ background: "rgba(0, 0, 0, 0.7)" }}>
+        <div
+          className="modal-dialog modal-dialog-centered mt-4"
+          style={{ background: "rgba(0, 0, 0, 0.7)" }}
+        >
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
@@ -31,28 +34,42 @@ export const CompleteSignup = () => {
             <div className="modal-body">
               <div class="container-fluid">
                 <div class="row justify-content-center">
-                  <div class="col-md-6 ml-auto"><Image width="300px"
-                    height="300px"
-                    src='/assets/images/LoginPage.png'
-                    alt="login-page" /></div>
+                  <div class="col-md-6 ml-auto">
+                    <Image
+                      width="300px"
+                      height="300px"
+                      src="https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/LoginPage.png"
+                      alt="login-page"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="modal-footer">
-              <Styles.ghostButton style={{
-                background: "#111b2b",
-                color: "white", display: "inline", paddingRight: "1.3rem", paddingLeft: "1.3rem", paddingTop: "10px",
-                paddingBottom: "10px", fontSize: "17px", marginRight: "40px"
-              }}
+              <Styles.ghostButton
+                style={{
+                  background: "#111b2b",
+                  color: "white",
+                  display: "inline",
+                  paddingRight: "1.3rem",
+                  paddingLeft: "1.3rem",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                  fontSize: "17px",
+                  marginRight: "40px",
+                }}
                 className="nav-link"
-                onClick={() => location.push('/onboard/signup/company')}>Complete your Signup</Styles.ghostButton >
+                onClick={() => location.push("/onboard/signup/company")}
+              >
+                Complete your Signup
+              </Styles.ghostButton>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default CompleteSignup;

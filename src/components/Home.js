@@ -10,7 +10,7 @@ export default class Home extends PureComponent {
           headingSize2="3.75rem"
           highlightSize="5rem"
           backgroundColor="#111B2B"
-          rightimageurl="/../assets/images/phone.gif"
+          rightimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/phone.gif"}
           heading={"Get your share of subscription Revenue at "}
           highlight={"$29"}
           heading2={"/month"}
@@ -23,7 +23,7 @@ export default class Home extends PureComponent {
           headingSize="2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
-          rightimageurl={"/../assets/images/ImageBanner1.png"}
+          rightimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/ImageBanner1.png"}
           heading={"Easy and Intuitive Sign Up Process"}
           bluesubheading={""}
           description="Customer Experience should be easy. With DailyKIT, get Higher Conversions and Customer Retention"
@@ -40,7 +40,7 @@ export default class Home extends PureComponent {
           headingSize="2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
-          leftimageurl={"/../assets/images/Fold 3.png"}
+          leftimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Fold+3.png"}
           heading={"Take Full Control of your Subscription Store"}
           bluesubheading={""}
           description=""
@@ -62,7 +62,7 @@ export default class Home extends PureComponent {
           headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
-          rightimageurl={"/../assets/images/Fold 5.png"}
+          rightimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Fold+5.png"}
           heading={"Why Choose DailyKIT?"}
           bluesubheading={""}
           description="The Success Of Your Business depends on How quickly you can respond to Changing Trends"
@@ -79,7 +79,7 @@ export default class Home extends PureComponent {
           headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
-          leftimageurl={"/../assets/images/Fold 6.png"}
+          leftimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Fold+6.png"}
           heading={"We are not done yet"}
           bluesubheading={""}
           description=""
@@ -101,7 +101,7 @@ export default class Home extends PureComponent {
           headingSize="	2.75rem"
           descriptionSize="20px"
           backgroundColor="#fff"
-          rightimageurl={"/../assets/images/Fold 7.png"}
+          rightimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Fold+7.png"}
           heading={"Nope, still not done. We’ve got more"}
           bluesubheading={""}
           description="Customer Experience should be easy. With DailyKIT, get Higher Conversions and Customer Retention"
@@ -118,7 +118,7 @@ export default class Home extends PureComponent {
         />
 
         <ScheduleMeetingSection1
-          leftimageurl={"/../assets/images/Fold 7.png"}
+          leftimageurl={"https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/Fold+7.png"}
           heading={"If you still have questions, Talk to Us."}
           question1={"How Do You Schedule A Meeting?"}
           answer1={"Select the date on the calendar, the time slot, and then simply fill in your information. Done!"}

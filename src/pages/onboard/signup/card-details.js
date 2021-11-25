@@ -222,7 +222,7 @@ const CardSetupForm = ({ intent, handleResult }) => {
                      <div className="col-md-4 col-md-offset-3" style={{ "marginTop": "100px" }}>
                         <Image width="300px"
                            height="300px"
-                           src='/assets/images/PaymentPage.png'
+                           src='https://s3.us-east-2.amazonaws.com/dailykit.org/onboarding/images/PaymentPage.png'
                            alt="payment-page" />
                      </div>
                   </div></div>
