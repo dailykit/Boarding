@@ -69,7 +69,7 @@ export const AuthProvider = ({ children }) => {
    })
 
    React.useEffect(() => {
-      if (!loading && location.pathname.includes('onboard')) {
+      if (!loading && location.pathname.includes('onboard/signup')) {
          if (Array.isArray(admins) && admins.length) {
             const [admin] = admins
             dispatch({ type: 'SET_USER', payload: admin })

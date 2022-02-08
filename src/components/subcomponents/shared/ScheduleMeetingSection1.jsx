@@ -2,8 +2,17 @@ import React, { PureComponent } from "react";
 export default class ScheduleMeetingSection1 extends PureComponent {
   render() {
     return (
-      <div className="container" id={this.props.id} style={{ marginTop: "180px" }}>
-        <h2 className="nunito text-center headingSize3" style={{ fontWeight: "bold" }}>{this.props.heading}</h2>
+      <div
+        className="container"
+        id={this.props.id}
+        style={{ marginTop: "180px" }}
+      >
+        <h2
+          className="nunito text-center headingSize3"
+          style={{ fontWeight: "bold" }}
+        >
+          {this.props.heading}
+        </h2>
         <div className="row justify-content-between schedule-meeting-box1">
           <div className="col-md-7 col-xs-10 nunito">
             {/* <div className="row justify-content-center text-center">
@@ -20,18 +29,18 @@ export default class ScheduleMeetingSection1 extends PureComponent {
                 <div></div>
               </div>
             </div>
-            <small>
-              <br /> <br />
-            </small>
+            <br /> <br />
           </div>
-          {/* </div>
-          </div> */}
-          <div className="col-md-5 col-xs-10" style={{ "marginTop": "70px" }}>
+          <div className="col-md-5 col-xs-10" style={{ marginTop: "70px" }}>
             <div className="question nunito">{this.props.question1}</div>
-            <p className="answer nunito descriptionSize">{this.props.answer1}</p>
+            <p className="answer nunito descriptionSize">
+              {this.props.answer1}
+            </p>
             <br />
             <div className="question nunito">{this.props.question2}</div>
-            <p className="answer nunito descriptionSize">{this.props.answer2}</p>
+            <p className="answer nunito descriptionSize">
+              {this.props.answer2}
+            </p>
             <br />
           </div>
         </div>
